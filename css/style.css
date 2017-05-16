@@ -18,11 +18,6 @@ header {
   align-items: center;
   color: #ffffff; }
 
-h2 {
-  text-align: center;
-  margin: 30px 0;
-}
-
 #wrapper {
   display: flex;
   width: 50%; }
@@ -44,7 +39,6 @@ h2 {
 
 .row {
   display: flex;
-<<<<<<< HEAD
   flex-direction: row;
   margin: 1em 0;
   width: 100%; }
@@ -69,19 +63,6 @@ section {
     font-size: 3em;
     padding: .2em; }
 
-=======
-  flex-direction: row; }
-.column-half {
-  width: 50%;
-}
-.space-under {
-  margin-bottom: 30px;
-}
-.img-responsive {
-  max-width: 100%;
-}
-/*Contact page specific */
->>>>>>> About_us_page
 #googleMap {
   width: 100%; }
 
@@ -131,5 +112,19 @@ footer {
 .btnBecomePartner {
   width: 50%;
   height: 30px; }
+
+/*About us page specific */
+.column-half {
+  width: 50%; }
+
+.space-under {
+  margin-bottom: 30px; }
+
+.img-responsive {
+  max-width: 100%; }
+
+h2 {
+  text-align: center;
+  margin: 30px 0; }
 
 /*# sourceMappingURL=style.css.map */
