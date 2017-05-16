@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Contact Us</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -13,27 +15,46 @@
 <div id="wrapper">
 	<div id="innerWrapper">
 		<div id="contentContainer">
-			<p id="textContent">Please get in touch if you have any questions or would just like to say hello. You can also visit our office in person at our location in Nørregade in the city centre, only 5 minutes from Nørreport.</p>
+			<section>
+				<p id="textContent">Please get in touch if you have any questions or would just like to say hello. You can also visit our office in person at our location in Nørregade in the city centre, only 5 minutes from Nørreport.</p>
 
-			<div class="row">
-			<div id="contactInfo">
-				<ul>
-					<li>Email: info@techmark.dk</li>
-					<li>Phone: (+45) 51 22 11 92</li>
-					<li>Address: Nørregade 26 1.sal tv KBH K 1642</li>
-					<li>Opening hours: 10:00 to 16:00 Monday to Friday</li>
-				</ul>
-			</div>
+				<div class="row">
+				<div id="contactInfo">
+					<ul>
+						<li>Email: info@techmark.dk</li>
+						<li>Phone: (+45) 51 22 11 92</li>
+						<li>Address: Nørregade 26 1.sal tv KBH K 1165</li>
+						<li>Opening hours: 10:00 to 16:00 Monday to Friday</li>
+					</ul>
+				</div>
 
-			<div id="socialMedia">Social media buttons</div>
+				<div id="socialMedia">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i>
+					<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+				</div>
+				</div> <!-- end row -->
+			</section>
 
-
-			</div> <!-- end row -->
-			<div id="GoogleMap">
+			<div>
 				<iframe id="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.431883405727!2d12.56914421623111!3d55.68147878053429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652530ffc7cba63%3A0x8de0c93d282f42d9!2sN%C3%B8rregade+26%2C+1165+K%C3%B8benhavn+K!5e0!3m2!1sen!2sdk!4v1494922295235" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 
-			<div id="contactForm">Contact form!</div>
+			<div id="contactForm">
+				<div class="row">
+					<input class="textField" type="text" name="name" placeholder="Name">
+					<input class="textField" type="text" name="email" placeholder="Email">
+				</div>
+				<div class="row">
+					<input class="subject textField" type="text" name="subject" placeholder="Subject">
+				</div>
+				<div class="row">
+					<textarea placeholder="Write your message here"></textarea>
+				</div>
+				<input type="submit" value="Submit">
+
+			</div>
 		</div>
 	</div> <!-- inner wrapper -->
 </div>
