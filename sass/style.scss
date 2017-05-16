@@ -72,11 +72,12 @@ section {
 button { /*this should become a global rule! all buttons should be the same */
   padding: 1em;
   width: 50%;
-  #btnFindMoreEvents {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-  }
+}
+
+#btnFindMoreEvents {
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 
