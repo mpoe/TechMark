@@ -35,7 +35,8 @@ header {
 
 #contentContainer {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%; }
 
 .row {
   display: flex;
@@ -45,6 +46,21 @@ header {
 
 section {
   padding: 0 3em; }
+
+/*index */
+#fpHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+.box {
+  height: 20em;
+  width: 20em;
+  background: green;
+  margin: .5em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*------------------------------------- Contact page specific -------------------------------------*/
 #contactInfo {
