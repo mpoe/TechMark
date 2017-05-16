@@ -1,0 +1,7 @@
+[
+    {
+        "sID": "1",
+        "sUsername": "admin",
+        "sPassword": "admin123"
+    }
+]

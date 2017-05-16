@@ -1,1 +1,0 @@
-api-delete-partner.php
