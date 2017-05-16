@@ -24,14 +24,10 @@ header {
 #wrapper {
   display: flex;
   width: 50%;
+  justify-content: center;
 }
 
 #innerWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
   margin: -5em 0;
   z-index: 100000;
   background: lightgrey;
@@ -55,7 +51,7 @@ section {
   padding: 0 3em;
 }
 
-/*index */
+/*-------------------------------------  index -------------------------------------*/
 
 #fpHeader {
   display: flex;
@@ -72,6 +68,17 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+button { /*this should become a global rule! all buttons should be the same */
+  padding: 1em;
+  width: 50%;
+  #btnFindMoreEvents {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+}
+
 
 
 /*------------------------------------- Contact page specific -------------------------------------*/
