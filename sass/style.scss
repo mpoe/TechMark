@@ -216,6 +216,7 @@ h2 {
 
 #adminPage {
   width: 75%;
+  height:100%;
   background: lightgray;
   margin-top: 1em;
 }
@@ -293,4 +294,39 @@ h2 {
   width: 5em;
 }
 
+/* admin edit page */
+.admEdit {
+  display: flex;
+  height: 100%;
+  section {
+    flex: 2;
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    input {
+      width:100%;
+      padding:1em;
+      margin: 1em 0;
+    }
+    textarea {
+      width:100%;
+      padding:1em;
+      height:50%;
+      margin: 1em 0;
+    }
+    button {
+      width:auto;
+    }
+  }
+  aside {
+    flex: 1;
+    background: blue;
+  }
+}
+
+button#EditPageSave {
+  width: 15em;
+}
 

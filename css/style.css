@@ -178,6 +178,7 @@ h2 {
 
 #adminPage {
   width: 75%;
+  height: 100%;
   background: lightgray;
   margin-top: 1em; }
 
@@ -236,5 +237,34 @@ time.icon {
 
 #partners img {
   width: 5em; }
+
+/* admin edit page */
+.admEdit {
+  display: flex;
+  height: 100%; }
+  .admEdit section {
+    flex: 2;
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .admEdit section input {
+      width: 100%;
+      padding: 1em;
+      margin: 1em 0; }
+    .admEdit section textarea {
+      width: 100%;
+      padding: 1em;
+      height: 50%;
+      margin: 1em 0; }
+    .admEdit section button {
+      width: auto; }
+  .admEdit aside {
+    flex: 1;
+    background: blue; }
+
+button#EditPageSave {
+  width: 15em; }
 
 /*# sourceMappingURL=style.css.map */
