@@ -80,8 +80,6 @@ button { /*this should become a global rule! all buttons should be the same */
   flex: 1;
 }
 
-
-
 /*------------------------------------- Contact page specific -------------------------------------*/
 #contactInfo {
   display: flex;
@@ -188,4 +186,111 @@ h2 {
   text-align: center;
   margin: 30px 0;
 }
+
+/* ------------------------   Admin  ------------------------  */
+#adminHeader {
+  background: lightgray;
+  width: 100%;
+  height: 3em;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+#adminlogo {
+  flex: 5;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  img {
+    width: 3em;
+  }
+}
+
+#adminMenu {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+#adminPage {
+  width: 75%;
+  background: lightgray;
+  margin-top: 1em;
+}
+
+/* special for tabs*/
+.admContent > div {
+    display: none;
+    padding: 20px 25px 5px;
+  }
+
+.admMain {
+  background:#fff;
+
+    input {
+      display: none;
+    }
+    label {
+      display: inline-block;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+    }
+    label:hover {
+      cursor: pointer;
+      background: #ed5a6a;
+    }
+    input:checked + label { /*targets active tab */
+      background: #d3d3d3;
+    }
+}
+
+
+/* uses checkbox to turn them on and off */
+#tab1:checked ~ .admContent #events, #tab2:checked ~ .admContent #partners {
+  display: block;
+}
+/* end special for tabs */
+
+.admContent {
+  background:lightgray;
+  .row {
+    height: 7em;
+    border: 1px solid;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  button {
+    width: 5em;
+  }
+}
+
+  /*icon */
+  time.icon {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.6em;
+    align-items:center;
+    background: #fff;
+    box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+
+    strong {
+      background: orange;
+      border-radius: .6em .6em 0 0;
+      padding: .3em;
+    }
+
+    span {
+      font-size: 2em;
+    }
+}
+
+#partners img {
+  width: 5em;
+}
+
 
