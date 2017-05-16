@@ -18,6 +18,11 @@ header {
   align-items: center;
   color: #ffffff; }
 
+h2 {
+  text-align: center;
+  margin: 30px 0;
+}
+
 #wrapper {
   display: flex;
   width: 50%; }
@@ -40,7 +45,15 @@ header {
 .row {
   display: flex;
   flex-direction: row; }
-
+.column-half {
+  width: 50%;
+}
+.space-under {
+  margin-bottom: 30px;
+}
+.img-responsive {
+  max-width: 100%;
+}
 /*Contact page specific */
 #googleMap {
   width: 100%; }
