@@ -132,6 +132,11 @@ footer {
   float: left;
 }
 
+.leftpanel h2, .rightpanel h2 {
+  text-align: left;
+  margin: 0;
+}
+
 .rightpanel {
   width: 50%;
   float: right;
