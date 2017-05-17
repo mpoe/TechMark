@@ -17,7 +17,7 @@
 	// edit the object
 	for( $i = 0; $i < count($ajUsers) ; $i++ ){
 		// check if the ids match
-		if( $sId ==  $ajUsers[$i]->ID  ){
+		if( $sId ==  $ajUsers[$i]->sID  ){
 			// echo $ajUsers[$i]->sUniqueId;
 			// update the user based on the position in the array
 			$ajUsers[$i]->sUsername = $sUsername;
