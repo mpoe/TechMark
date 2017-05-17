@@ -67,3 +67,19 @@ $("body").append('<footer>\
 </footer>')
 
 }
+
+function fnSearchOnEnter() {
+
+$(".navigationSearch").keyup(function(event){
+    if(event.keyCode == 13){ //Enter key
+        window.location.href = "searchResults.html";
+    }
+
+});
+
+}
+
+$(document).on("click", "#btnFindMoreEvents", function(){
+    window.location.href = "searchResults.html";
+});
+

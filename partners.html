@@ -8,24 +8,6 @@
 
 <body>
 
-<nav class="navigation">
-    <a href="index.html" class="logolinkcontainer">
-        	<img src="./img/techmarkLogoNoText.svg" alt="Techmark logo" class="logo"></img>
-    </a>
-
-            <div class="navitems">
-                <ul>
-					<a href="index.html">Home</a>
-					<a href="searchResults.html">Events</a>
-					<a href="about-us.html">About us</a>
-					<a href="partners.html">Partners</a>
-					<a href="contact.html">Contact us</a>
-					<input type="search" class="navigationSearch" placeholder="Search for events...">
-
-				</ul>
-			</div>
-</nav>
-
 <header>
 	<h1>Partners</h1>
 </header>
@@ -155,7 +137,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu
 					<a href="https://github.com" class="fa fa-github partner fa-5x"> </a>
 					<a href="https://facebook.com" class="fa fa-facebook partner fa-5x"> </a>
 					<a href="https://stripe.com" class="fa fa-cc-stripe partner fa-5x"> </a>
-					<a href="https://fontawesome.io" class="fa fa-fort-awesome partner fa-5x"> </a>
+					<a href="https://twitter.com" class="fa fa-twitter partner fa-5x"> </a>
 					<a href="https://reddit.com" class="fa fa-reddit partner fa-5x"> </a>
 					<a href="https://spotify.com" class="fa fa-spotify partner fa-5x"> </a>
 
@@ -168,33 +150,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu
 </div>
 
 
-<footer class="pageFooter"> 
-    <div class="leftfooter">
-    	<a href="index.html">News</a><br>
-    	<a href="index.html">Videos</a><br>
-    	<a href="searchResults.html">Events</a>
-    </div>
-    <div class="centerfooter">
-    	<a href="about-us.html">About Us</a><br>
-    	<a href="contact.html">Contact Us</a><br>
-    	<a href="partners.html">Become a Partner</a>
-    </div>
-    <div class="rightfooter">
-    	<input type="text" class="txtSubscribe" placeholder="Subscribe to the Techmark newsletter">
-    	<button class="btnSubscribe">Subscribe</button>
-    </div>
-</footer>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/common.js"></script>
 <script>
 
-$(".navigationSearch").keyup(function(event){
-    if(event.keyCode == 13){ //Enter key
-        window.location.href = "searchResults.html";
-	}
-
-});
+fnAddNavigation(); 
+fnSearchOnEnter();
 
 </script>
 </body>
