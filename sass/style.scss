@@ -146,7 +146,7 @@ footer {
 }
 
 
-/*Partners page specific */
+/* ------------------------   PARTNERS PAGE -------------------------------------*/
 
 .infobox {
   width: 100%;
@@ -171,7 +171,96 @@ footer {
   height: 30px;
 }
 
-/*About us page specific */
+/* ------------------------   NAVIGATION (Header + Footer) -------------------------------------*/
+
+.navigation {
+  background-color: #4CAF50;
+  width: 100vw;
+  display: flex;
+  height: 75px;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  margin-left: 20px;
+}
+
+.navitems {
+  height: 100%;
+  display: flex;
+  align-items: center; 
+}
+
+.navitems a{
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 10px;
+  margin: 15px 20px 0px 20px;
+  color: white;
+}
+.navitems a:hover{
+  color: #1B5E20;
+}
+
+.logolinkcontainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start; 
+}
+
+.partner {
+    text-decoration: none;
+    margin: 0px 0px 0px 20px;
+    color: green;
+  }
+
+.navigationSearch {
+margin-right:20px;
+height: 200px;
+
+  }
+
+.pageFooter {
+  background-color: #388E3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.pageFooter a {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: black;
+}
+
+.leftfooter{
+  text-align:left;
+  float:left;
+   flex: 1;
+   margin-top: 20px;
+}
+.centerfooter{
+  text-align:center;
+   flex: 1;
+      margin-top: 20px;
+}
+.rightfooter{
+  float:right;
+  text-align: right;
+   flex: 1;
+      margin-top: 20px;
+
+}
+.btnSubscribe {
+  width: 75px;
+}
+.txtSubscribe {
+  height: 30px;
+}
+
+/* ------------------------   ABOUT US PAGE -------------------------------------*/
 
 .column-half {
   width: 50%;
@@ -304,7 +393,7 @@ footer {
   width: 5em;
 }
 
-/* admin edit page */
+/* ------------------------   ADMIN EDIT PAGE -------------------------------------*/
 .admEdit {
   display: flex;
   height: 100%;

@@ -5,7 +5,26 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+
+<nav class="navigation">
+    <a href="index.html" class="logolinkcontainer">
+        	<img src="./img/techmarkLogoNoText.svg" alt="Techmark logo" class="logo"></img>
+    </a>
+
+            <div class="navitems">
+                <ul>
+					<a href="index.html">Home</a>
+					<a href="searchResults.html">Events</a>
+					<a href="about-us.html">About us</a>
+					<a href="partners.html">Partners</a>
+					<a href="contact.html">Contact us</a>
+					<input type="search" class="navigationSearch" placeholder="Search for events...">
+
+				</ul>
+			</div>
+</nav>
 
 <header>
 	<h1>Partners</h1>
@@ -14,7 +33,7 @@
 <div id="wrapper">
 	<div id="innerWrapper">
 		<div id="contentContainer">
-			<p id="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit.</p>
+			<p id="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, "philip is the best" - Philip, tortor mauris molestie elit.</p>
 
 			<div class="row">
 
@@ -24,8 +43,7 @@
 						<h2>How we can help eachother</h2>
 
 						<p>
-						Consectetur adipiscing elit. Nulla quam velit, 
-						vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit,   ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit. Commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit.
 						</p>
 					</div>
 
@@ -33,7 +51,8 @@
 					<ul>
 						<li>Lorem ipsum dolor sit amet</li>
 						<li>Consectetur adipiscing elit.</li>
-						<li>Nulla quam velit, vulputate eu pharetra nec, Mattis ac neque.</li>
+						<li>Nulla quam velit, vulputate eu pharetra nec, 
+						Mattis ac neque.</li>
 						<li>Duis vulputate commodo lectus, mauris, Malesuada quis ornare accumsan, blandit sed diam.</li>
 					<ul>
 					</div>
@@ -51,7 +70,7 @@
 						<h2>Coming up with headers is hard</h2>
 
 						<p>
-						Consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit,   ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit. Commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit.
 						</p>
 					</div>
 
@@ -126,16 +145,57 @@
 
 			</div> <!-- end row -->
 
+			<div class="row">
+
+				<div class="infobox">
+
+					<h2>Our partners</h2>
+
+					<a href="https://amazon.com" class="fa fa-amazon partner fa-5x"> </a>
+					<a href="https://github.com" class="fa fa-github partner fa-5x"> </a>
+					<a href="https://facebook.com" class="fa fa-facebook partner fa-5x"> </a>
+					<a href="https://stripe.com" class="fa fa-cc-stripe partner fa-5x"> </a>
+					<a href="https://fontawesome.io" class="fa fa-fort-awesome partner fa-5x"> </a>
+					<a href="https://reddit.com" class="fa fa-reddit partner fa-5x"> </a>
+					<a href="https://spotify.com" class="fa fa-spotify partner fa-5x"> </a>
+
+				</div>
+
+			</div> <!-- end row -->
+
 		</div>
 	</div> <!-- inner wrapper -->
 </div>
 
 
-<footer>
-	footer
+<footer class="pageFooter"> 
+    <div class="leftfooter">
+    	<a href="index.html">News</a><br>
+    	<a href="index.html">Videos</a><br>
+    	<a href="searchResults.html">Events</a>
+    </div>
+    <div class="centerfooter">
+    	<a href="about-us.html">About Us</a><br>
+    	<a href="contact.html">Contact Us</a><br>
+    	<a href="partners.html">Become a Partner</a>
+    </div>
+    <div class="rightfooter">
+    	<input type="text" class="txtSubscribe" placeholder="Subscribe to the Techmark newsletter">
+    	<button class="btnSubscribe">Subscribe</button>
+    </div>
 </footer>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(".navigationSearch").keyup(function(event){
+    if(event.keyCode == 13){ //Enter key
+        window.location.href = "searchResults.html";
+	}
+
+});
+
+</script>
 </body>
 </html>
