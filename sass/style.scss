@@ -1,7 +1,26 @@
+/*-------------------------------------  Color variables (Following our style guide) -------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+$button: #028910; //Japanese Laurel: Green
+$titles: #028910; //Japanese Laurel: Green
+
+$background: #EEEEEE; //Gallery: Grey
+
+$hoverbutton: #015F0B; //Camarone: Dark Green
+$hoverbuttonwarning: #FF5822; // Outrageous Orange: Orange
+$hoverbuttonalert: #CC0000; // Guardsman Red: Red
+
+$logofont: 'Righteous', cursive;
+$bodyfont: 'Droid Sans', sans-serif;
+
+
 * {
   box-sizing: border-box;
   margin:0;
   padding:0;
+  font-family: $bodyfont;
 }
 
 body {
@@ -72,6 +91,7 @@ section {
 button { /*this should become a global rule! all buttons should be the same */
   padding: 1em;
   width: 50%;
+  background-color: $button;
 }
 
 #btnFindMoreEvents {
@@ -177,7 +197,7 @@ footer {
 /* ------------------------   NAVIGATION (Header + Footer) -------------------------------------*/
 
 .navigation {
-  background-color: #4CAF50;
+  background-color: rgba(255, 255, 255, 0.2);
   width: 100vw;
   display: flex;
   height: 75px;
@@ -200,7 +220,7 @@ footer {
   text-decoration: none;
   padding: 10px;
   margin: 15px 20px 0px 20px;
-  color: white;
+  color: black;
 }
 .navitems a:hover{
   color: #1B5E20;
