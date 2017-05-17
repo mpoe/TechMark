@@ -1,7 +1,11 @@
+/*-------------------------------------  Color variables (Following our style guide) -------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans");
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Droid Sans", sans-serif; }
 
 body {
   display: flex;
@@ -52,7 +56,7 @@ section {
 .box {
   height: 20em;
   width: 20em;
-  background: green;
+  background: blue;
   margin: .5em 1em;
   display: flex;
   justify-content: center;
@@ -61,7 +65,8 @@ section {
 button {
   /*this should become a global rule! all buttons should be the same */
   padding: 1em;
-  width: 50%; }
+  width: 50%;
+  background-color: #028910; }
 
 #btnFindMoreEvents {
   display: flex;
@@ -144,7 +149,7 @@ footer {
 
 /* ------------------------   NAVIGATION (Header + Footer) -------------------------------------*/
 .navigation {
-  background-color: #4CAF50;
+  background-color: rgba(255, 255, 255, 0.2);
   width: 100vw;
   display: flex;
   height: 75px; }
@@ -164,7 +169,7 @@ footer {
   text-decoration: none;
   padding: 10px;
   margin: 15px 20px 0px 20px;
-  color: white; }
+  color: black; }
 
 .navitems a:hover {
   color: #1B5E20; }
@@ -379,5 +384,21 @@ section.admSecHalf {
 #AddUser button {
   margin: 1em;
   width: 50%; }
+
+/*-------------------------------------  searchpage -------------------------------------*/
+#filter {
+  height: 3em;
+  width: 13.7em;
+  margin: .5em 1.2em;
+  padding-left: 1em; }
+
+input.searchTerm {
+  height: 3em;
+  padding-left: 1em; }
+
+input.searchBtn {
+  height: 3em;
+  width: 3em;
+  margin: .5em 1em; }
 
 /*# sourceMappingURL=style.css.map */

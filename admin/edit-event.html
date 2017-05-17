@@ -22,10 +22,16 @@
 		<section>
 			<h2>Edit Events</h2>
 
-			<input type="text" placeholder="Edit Title">
-			<button>Add Media</button>
-			<textarea placeholder="Add event details here"></textarea>
-			<button id="EditPageSave">Save</button>
+			<form id="frm-create-event" enctype="multipart/form-data">
+				<input type="input" name="title" placeholder="title">
+				<input type="input" name="tag" placeholder="tag"> 
+				<input type="textarea" name="description" placeholder="Description">
+				<input type="input" name="location" placeholder="location">
+				<input type="input" name="price" placeholder="price">
+				<input type="date" name="date">
+				<input type="file" name="image">
+				<button id="btn-create-event" type="submit">Create event</button>
+			</form>
 		</section>
 
 	</div>
@@ -34,5 +40,17 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../js/login.js"></script>
+<script src="../js/common.js"></script>
+
+<script>
+
+
+console.log(getUrlParameter("id"))
+
+$.get("api/api-get-all-events.php", function(jData){
+		console.log(jData);
+});
+
+</script>
 </body>
 </html>
