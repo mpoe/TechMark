@@ -11,7 +11,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  background: #EEEEEE; }
 
 header {
   width: 100%;
@@ -30,8 +31,13 @@ header {
 #innerWrapper {
   margin: -5em 0;
   z-index: 100000;
-  background: lightgrey;
-  padding: 3em 0; }
+  background: #fff;
+  padding: 1em 0; }
+  #innerWrapper h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 2em 0; }
 
 #contentContainer {
   display: flex;
@@ -53,9 +59,12 @@ button, input[type=submit] {
   /*this should become a global rule! all buttons should be the same */
   padding: 1em;
   width: 50%;
-  background-color: #028910; }
+  background-color: #028910;
+  color: #fff;
+  font-weight: 800;
+  border: 0; }
 
-button:hover {
+button:hover, input[type=submit]:hover {
   background-color: #015F0B;
   cursor: pointer; }
 
@@ -80,6 +89,10 @@ button:hover {
   flex: 1; }
 
 /*------------------------------------- Contact page specific -------------------------------------*/
+#contactHeader {
+  background: url(../img/contactbanner.jpg) no-repeat center;
+  background-size: cover; }
+
 #contactInfo {
   display: flex;
   flex: 1; }
@@ -121,18 +134,10 @@ input.subject.textField {
   width: 100%; }
 
 /* ------------------------   END CONTACT PAGE -------------------------------------*/
-footer {
-  background: grey;
-  width: 100%;
-  height: 15em;
-  clear: both;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 /* ------------------------   PARTNERS PAGE -------------------------------------*/
-.infobox {
-  width: 100%; }
+#partnerheader {
+  background: url(../img/partnersbanner.jpg) no-repeat center;
+  background-size: cover; }
 
 .leftpanel {
   width: 50%;
@@ -156,11 +161,18 @@ footer {
   .partnerBox a {
     display: flex;
     align-items: center;
-    margin-right: 1em; }
+    margin-right: .5em; }
 
 .partnerRow {
   flex-direction: column; }
 
+.partnerBoxContent {
+  margin: 1em 1em 1em 0; }
+
+#outPartners {
+  margin-top: 2em; }
+
+/*currently exclusive to partners? */
 .innerRow {
   flex-direction: row;
   flex: 1;
@@ -221,10 +233,10 @@ footer {
 
 .navigationSearch {
   margin-right: 20px;
-  height: 200px; }
+  padding: 1em; }
 
 footer {
-  background-color: #388E3C;
+  background-color: #363636;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +251,7 @@ footer {
 #footerMain {
   flex-direction: row;
   display: flex;
-  margin-top: 7em;
+  margin-top: 10em;
   width: 80%; }
   #footerMain img {
     width: 15em; }
@@ -269,6 +281,10 @@ footer {
   padding-bottom: .5em; }
 
 /* ------------------------   ABOUT US PAGE -------------------------------------*/
+#aboutUsHeader {
+  background: url(../img/aboutusbanner.jpg) no-repeat center;
+  background-size: cover; }
+
 .column-half {
   width: 50%; }
 
@@ -281,6 +297,11 @@ footer {
 .about-us h2 {
   text-align: center;
   margin: 30px 0; }
+
+.testimonalGiver {
+  text-align: right;
+  color: grey;
+  padding-top: .5em; }
 
 /*Event page specific */
 .event-date {

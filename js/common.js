@@ -45,7 +45,7 @@ $("body").prepend('<nav class="navigation">\
 $("body").append('<footer>\
     <div id="footerMain">\
     <div class="leftfooter">\
-              <img src="./img/TechmarkLogo.png" alt="Techmark logo" class="footerlogo">\
+              <img src="./img/techmarkWhite.png" alt="Techmark logo" class="footerlogo">\
     </div>\
     <div class="centerfooter">\
             <div >\
