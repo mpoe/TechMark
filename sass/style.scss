@@ -73,6 +73,16 @@ section {
   padding: 0 3em;
 }
 
+button, input[type=submit] { /*this should become a global rule! all buttons should be the same */
+  padding: 1em;
+  width: 50%;
+  background-color: $button;
+}
+button:hover {
+  background-color: $hoverbutton;
+  cursor: pointer;
+}
+
 /*-------------------------------------  index -------------------------------------*/
 
 #fpHeader {
@@ -89,12 +99,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-button { /*this should become a global rule! all buttons should be the same */
-  padding: 1em;
-  width: 50%;
-  background-color: $button;
 }
 
 #btnFindMoreEvents {
