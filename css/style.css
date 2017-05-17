@@ -279,7 +279,7 @@ footer {
 
 .admMain {
   background: #fff; }
-  .admMain input {
+  .admMain input[type="radio"] {
     display: none; }
   .admMain label {
     display: inline-block;
@@ -294,14 +294,17 @@ footer {
     background: #d3d3d3; }
 
 /* uses checkbox to turn them on and off */
-#tab1:checked ~ .admContent #events, #tab2:checked ~ .admContent #partners {
+#tab1:checked ~ .admContent #events,
+#tab2:checked ~ .admContent #partners,
+#tab3:checked ~ .admContent #AddEvents,
+#tab4:checked ~ .admContent #AddPartners,
+#tab5:checked ~ .admContent #AddUser {
   display: block; }
 
 /* end special for tabs */
 .admContent {
   background: lightgray; }
   .admContent .row {
-    height: 7em;
     border: 1px solid;
     padding: 1em;
     display: flex;
@@ -331,7 +334,8 @@ time.icon {
 /* ------------------------   ADMIN EDIT PAGE -------------------------------------*/
 .admEdit {
   display: flex;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
   .admEdit section {
     flex: 2;
     background: orange;
@@ -356,5 +360,24 @@ time.icon {
 
 button#EditPageSave {
   width: 15em; }
+
+section.admSecHalf {
+  display: flex;
+  justify-content: center; }
+
+#AddUser section {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0; }
+#AddUser input {
+  width: 50%;
+  padding: 1em;
+  margin: 1em 0; }
+#AddUser button {
+  margin: 1em;
+  width: 50%; }
 
 /*# sourceMappingURL=style.css.map */

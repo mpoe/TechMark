@@ -332,7 +332,7 @@ height: 200px;
 .admMain {
   background:#fff;
 
-    input {
+    input[type="radio"] {
       display: none;
     }
     label {
@@ -352,7 +352,11 @@ height: 200px;
 
 
 /* uses checkbox to turn them on and off */
-#tab1:checked ~ .admContent #events, #tab2:checked ~ .admContent #partners {
+#tab1:checked ~ .admContent #events,
+#tab2:checked ~ .admContent #partners,
+#tab3:checked ~ .admContent #AddEvents,
+#tab4:checked ~ .admContent #AddPartners,
+#tab5:checked ~ .admContent #AddUser {
   display: block;
 }
 /* end special for tabs */
@@ -360,7 +364,6 @@ height: 200px;
 .admContent {
   background:lightgray;
   .row {
-    height: 7em;
     border: 1px solid;
     padding: 1em;
     display: flex;
@@ -400,6 +403,7 @@ height: 200px;
 .admEdit {
   display: flex;
   height: 100%;
+  width:100%;
   section {
     flex: 2;
     background: orange;
@@ -431,3 +435,29 @@ height: 200px;
 button#EditPageSave {
   width: 15em;
 }
+
+section.admSecHalf {
+  display: flex;
+  justify-content: center;
+}
+
+#AddUser {
+  section {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  input {
+    width: 50%;
+    padding:1em;
+    margin: 1em 0;
+  }
+  button {
+    margin: 1em;
+    width: 50%;
+  }
+}
+

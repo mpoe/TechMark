@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Techmark Admin</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div id="adminHeader">
+    <div id="adminlogo"><img src="../img/techmarkLogoNoText.svg" alt="techmark Logo">
+    <h1>Welcome Admin</h1>
+    </div>
+    <div id="adminMenu">
+        <a>Help</a>
+        <a>Settings</a>
+        <a>Logout</a>
+    </div>
+</div>
+
+<div id="adminPage">
+    <div class="admMain">
+            <!-- The tabs -->
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Events</label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Partners</label>
+
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Add Events</label>
+
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4">Add Partners</label>
+
+            <input id="tab5" type="radio" name="tabs">
+            <label for="tab5">Add Edit Users</label>
+
+            <!-- Tab content -->
+        <div class="admContent">
+            <div id="events">
+               <div class="row">
+                   <time datetime="2014-09-20" class="icon">
+                       <strong>September</strong>
+                       <span>20</span>
+                       <em>Saturday</em>
+                   </time>
+
+                   <span>Some event in Copenhagen</span>
+                   <span>5/6/2017</span>
+                   <span>14:00 - 16:00</span>
+                   <div>
+                       <button>Edit</button>
+                       <button>Delete</button>
+                   </div>
+               </div>
+            </div>
+
+            <div id="partners">
+                <div class="row">
+                    <div>
+                        <img src="../img/admin/travelBirdsLogoNoText.png">
+                    </div>
+
+                    <span>Some event in Copenhagen</span>
+                    <time>5/6/2017</time>
+                    <time>14:00 - 16:00</time>
+                    <div>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../img/admin/simGarden.jpg">
+                    </div>
+
+                    <span>Some event in Copenhagen</span>
+                    <time>5/6/2017</time>
+                    <time>14:00 - 16:00</time>
+                    <div>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../img/admin/peer2play.jpg">
+                    </div>
+
+                    <span>Some event in Copenhagen</span>
+                    <time>5/6/2017</time>
+                    <time>14:00 - 16:00</time>
+                    <div>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../img/admin/memoverlogo.png">
+                    </div>
+
+                    <span>Some event in Copenhagen</span>
+                    <time>5/6/2017</time>
+                    <time>14:00 - 16:00</time>
+                    <div>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../img/techmarkLogoNoText.svg">
+                    </div>
+
+                    <span>Some event in Copenhagen</span>
+                    <time>5/6/2017</time>
+                    <time>14:00 - 16:00</time>
+                    <div>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="AddEvents">
+                <div class="row">
+                    <div class="admEdit">
+                        <section>
+                            <h2>Add Events</h2>
+                            <input type="text" placeholder="Edit Title">
+                            <button>Add Media</button>
+                            <textarea placeholder="Add event details here"></textarea>
+                            <button id="addPartnerSave">Add event</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div id="AddPartners">
+                <div class="row">
+                    <div class="admEdit">
+                        <section>
+                            <h2>Add Partners</h2>
+
+                            <input type="text" placeholder="Edit Title">
+                            <button>Add Media</button>
+                            <textarea placeholder="Add event details here"></textarea>
+                            <button id="addEventSave">Add Partner</button>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="AddUser">
+                <div class="row">
+                    <section>
+                        <h2>Add Users</h2>
+
+                        <input type="text" placeholder="User name">
+                        <input type="text" placeholder="Password">
+                        <button>Add Media</button>
+                        <button id="AddUserSave">Add user</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
