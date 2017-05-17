@@ -42,21 +42,28 @@ $("body").prepend('<nav class="navigation">\
 
 //Append the footer (last item in body)
 
-$("body").append('<footer class="pageFooter">\
+$("body").append('<footer>\
+    <div id="footerMain">\
     <div class="leftfooter">\
-        <a href="index.html">News</a><br>\
-        <a href="index.html">Videos</a><br>\
-        <a href="searchResults.html">Events</a>\
+              <img src="./img/TechmarkLogo.png" alt="Techmark logo" class="footerlogo">\
     </div>\
     <div class="centerfooter">\
-        <a href="about-us.html">About Us</a><br>\
-        <a href="contact.html">Contact Us</a><br>\
-        <a href="partners.html">Become a Partner</a>\
+            <div >\
+                <ul>\
+                        <li>Email: info@techmark.dk</li>\
+                        <li>Phone: (+45) 51 22 11 92</li>\
+                        <li>Address: Nørregade 26 1.sal tv KBH K 1165</li>\
+                        <li>Opening hours: 10:00 to 16:00 Monday to Friday</li>\
+                </ul>\
+            </div>\
     </div>\
     <div class="rightfooter">\
-        <input type="text" class="txtSubscribe" placeholder="Subscribe to the Techmark newsletter">\
+        <h3>Subscribe to our newsletter</h3>\
+        <input type="text" class="txtSubscribe" placeholder="Enter your email">\
         <button class="btnSubscribe">Subscribe</button>\
     </div>\
+    </div>\
+    <div id="footerUnder"><p>Copyright TechMark A/S - All rights reserved</p></div>\
 </footer>')
 
 }
