@@ -153,7 +153,7 @@ footer {
 }
 
 .leftpanel {
-  width: 50%; 
+  width: 50%;
   float: left;
 }
 
@@ -167,7 +167,7 @@ footer {
   float: right;
 }
 .btnBecomePartner {
-  width: 50%; 
+  width: 50%;
   height: 30px;
 }
 
@@ -182,11 +182,21 @@ footer {
 .img-responsive {
   max-width: 100%;
 }
-h2 {
+.about-us h2 {
   text-align: center;
   margin: 30px 0;
 }
 
+  /*Event page specific */
+.event-date {
+  text-align: center;
+  padding: 10px;
+  background-color: pink;
+  width: 100px;
+}
+.social-media-calendar {
+  margin-top: 100px;
+}
 /* ------------------------   Admin  ------------------------  */
 #adminHeader {
   background: lightgray;
@@ -329,4 +339,3 @@ h2 {
 button#EditPageSave {
   width: 15em;
 }
-
