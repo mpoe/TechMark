@@ -1,8 +1,1 @@
-[
-    {
-        "sID": "1",
-        "sPartnerName": "google",
-        "sPartnerWebsite": "wwww.google.com",
-        "sPartnerMail": "google@google.com"
-    }
-]
+[]
