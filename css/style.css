@@ -36,7 +36,8 @@ header {
 #contentContainer {
   display: flex;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  padding: 1em; }
 
 .row {
   display: flex;
@@ -145,12 +146,40 @@ footer {
   width: 50%;
   float: right; }
 
-.btnBecomePartner {
-  width: 50%;
-  height: 30px; }
+.rpButton {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.partnerBox {
+  display: flex; }
+  .partnerBox a {
+    display: flex;
+    align-items: center;
+    margin-right: 1em; }
+
+.partnerRow {
+  flex-direction: column; }
+
+.innerRow {
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+  /*some of these also apply to the box below it in the html (all innerRow boxes*/ }
+  .innerRow p {
+    flex: 1;
+    padding: 0 1em; }
+  .innerRow ul {
+    flex: 1;
+    padding: 0 1em; }
 
 .ourpartners {
   text-align: center; }
+
+#iconRow {
+  justify-content: center;
+  display: flex;
+  margin-top: 2em; }
 
 /* ------------------------   NAVIGATION (Header + Footer) -------------------------------------*/
 .navigation {
