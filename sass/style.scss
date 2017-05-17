@@ -246,42 +246,60 @@ height: 200px;
 
   }
 
-.pageFooter {
+footer {
   background-color: #388E3C;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-}
-.pageFooter a {
-  font-size: 1.3em;
-  text-decoration: none;
-  color: black;
+  flex-direction: column;
+  height: auto;
+  width:100%;
+  a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: black;
+  }
 }
 
-.leftfooter{
-  text-align:left;
-  float:left;
-   flex: 1;
-   margin-top: 20px;
+#footerMain {
+  flex-direction: row;
+  display: flex;
+  margin-top: 7em;
+  width: 80%;
+  img {
+    width: 15em;
+  }
+  li {
+    list-style-type: none;
+  }
 }
-.centerfooter{
-  text-align:center;
-   flex: 1;
-      margin-top: 20px;
-}
-.rightfooter{
-  float:right;
-  text-align: right;
-   flex: 1;
-      margin-top: 20px;
 
+.leftfooter, .centerfooter, .rightfooter{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.btnSubscribe {
-  width: 75px;
+
+.rightfooter {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  h3 {
+    padding-bottom:.3em;
+  }
+  button {
+    width:50%;
+  }
+  input {
+    padding: 1em;
+    width: 50%;
+  }
 }
-.txtSubscribe {
-  height: 30px;
+
+#footerUnder {
+  margin-top: 2em;
+  padding-bottom: .5em;
 }
 
 /* ------------------------   ABOUT US PAGE -------------------------------------*/

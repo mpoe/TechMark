@@ -189,40 +189,50 @@ footer {
   margin-right: 20px;
   height: 200px; }
 
-.pageFooter {
+footer {
   background-color: #388E3C;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; }
+  flex-direction: column;
+  height: auto;
+  width: 100%; }
+  footer a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: black; }
 
-.pageFooter a {
-  font-size: 1.3em;
-  text-decoration: none;
-  color: black; }
+#footerMain {
+  flex-direction: row;
+  display: flex;
+  margin-top: 7em;
+  width: 80%; }
+  #footerMain img {
+    width: 15em; }
+  #footerMain li {
+    list-style-type: none; }
 
-.leftfooter {
-  text-align: left;
-  float: left;
+.leftfooter, .centerfooter, .rightfooter {
   flex: 1;
-  margin-top: 20px; }
-
-.centerfooter {
-  text-align: center;
-  flex: 1;
-  margin-top: 20px; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .rightfooter {
-  float: right;
-  text-align: right;
-  flex: 1;
-  margin-top: 20px; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .rightfooter h3 {
+    padding-bottom: .3em; }
+  .rightfooter button {
+    width: 50%; }
+  .rightfooter input {
+    padding: 1em;
+    width: 50%; }
 
-.btnSubscribe {
-  width: 75px; }
-
-.txtSubscribe {
-  height: 30px; }
+#footerUnder {
+  margin-top: 2em;
+  padding-bottom: .5em; }
 
 /* ------------------------   ABOUT US PAGE -------------------------------------*/
 .column-half {
