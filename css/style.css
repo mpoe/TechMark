@@ -1,4 +1,4 @@
-* {
+s* {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
@@ -52,7 +52,7 @@ section {
 .box {
   height: 20em;
   width: 20em;
-  background: green;
+  background: blue;
   margin: .5em 1em;
   display: flex;
   justify-content: center;
@@ -356,5 +356,21 @@ time.icon {
 
 button#EditPageSave {
   width: 15em; }
+
+/*-------------------------------------  searchpage -------------------------------------*/
+#filter {
+  height: 3em;
+  width: 13.7em;
+  margin: .5em 1.2em;
+  padding-left: 1em; }
+
+input.searchTerm {
+  height: 3em;
+  padding-left: 1em; }
+
+input.searchBtn {
+  height: 3em;
+  width: 3em;
+  margin: .5em 1em; }
 
 /*# sourceMappingURL=style.css.map */
