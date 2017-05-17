@@ -72,3 +72,7 @@ $(".navigationSearch").keyup(function(event){
 
 }
 
+$(document).on("click", "#btnFindMoreEvents", function(){
+    window.location.href = "searchResults.html";
+});
+
