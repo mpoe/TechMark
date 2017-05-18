@@ -434,8 +434,6 @@ footer {
   height: 15em;
 }
 
-
-
 /* ------------------------   END Event page   ------------------------  */
 
 /* ------------------------   Admin  ------------------------  */
@@ -498,7 +496,6 @@ footer {
       background: #d3d3d3;
     }
 }
-
 
 /* uses checkbox to turn them on and off */
 #tab1:checked ~ .admContent #events,
@@ -617,7 +614,6 @@ section.admSecHalf {
   background-size:cover;
 }
 
-
 #SearchDateSelector {
   flex: 2;
   justify-content: flex-start;
@@ -648,4 +644,3 @@ section.admSecHalf {
     width: 100%;
     margin: .5em 1em;
   }
-
