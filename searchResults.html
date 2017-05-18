@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Contact Us</title>
+	<title>Search Results</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,7 +9,7 @@
 <body>
 
 <header>
-	<h1>Search</h1>
+	<h1>Search Results</h1>
 </header>
 
 <div id="wrapper">
@@ -21,34 +21,16 @@
 
 					<div id="bla"><input id="filter" type="search" placeholder="Date, location, tag"></div>
 
-					<form class="searchForm" method="get" action="">              
-					  <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
+					<form class="searchForm" method="get" action="">
+					  <input class="searchTerm" placeholder="Search…" autocomplete="off"/>
 					  <input type="submit" class="searchBtn" value="GO"/>
 					</form>
 
-					
-				</div>
-				
-			</div>
-			<div>
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
+
 				</div>
 
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
-				</div>
-
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
-				</div>
 			</div>
+			<div id="search-results"></div>
 
 		</div>
 	</div> <!-- inner wrapper -->
@@ -59,7 +41,7 @@
 <script src="js/common.js"></script>
 <script>
 
-fnAddNavigation(); 
+fnAddNavigation();
 $(".navigationSearch").hide();
 
 </script>
