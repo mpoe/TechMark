@@ -22,15 +22,16 @@
 		<section>
 			<h2>Edit Events</h2>
 
-			<form id="frm-create-event" enctype="multipart/form-data">
-				<input type="input" name="title" placeholder="title">
-				<input type="input" name="tag" placeholder="tag"> 
-				<input type="textarea" name="description" placeholder="Description">
-				<input type="input" name="location" placeholder="location">
-				<input type="input" name="price" placeholder="price">
-				<input type="date" name="date">
-				<input type="file" name="image">
-				<button id="btn-create-event" type="submit">Create event</button>
+			<form id="frm-edit-event" action="api/api-edit-event.php" method="GET">
+				<input id="txt-edit-event-id" type="input" name="id" style="display: none">
+				<input id="txt-edit-event-title" type="input" name="title" placeholder="title">
+				<input id="txt-edit-event-tag" type="input" name="tag" placeholder="tag"> 
+				<input id="txt-edit-event-description" type="textarea" name="description" placeholder="Description">
+				<input id="txt-edit-event-location" type="input" name="location" placeholder="location">
+				<input id="txt-edit-event-date" type="date" name="date">
+				<input id="txt-edit-event-price" type="input" name="price" placeholder="price">
+				
+				<button id="btn-create-event" type="submit">edit</button>
 			</form>
 		</section>
 
@@ -43,13 +44,44 @@
 <script src="../js/common.js"></script>
 
 <script>
-
-
-console.log(getUrlParameter("id"))
-
-$.get("api/api-get-all-events.php", function(jData){
-		console.log(jData);
+var sIDToEdit = getUrlParameter("id");
+$.getJSON("api/api-get-all-events.php", function(jData){
+	for(var i = 0; i<jData.length;i++){
+		if(jData[i].sID == sIDToEdit){
+			$("#txt-edit-event-id").val(jData[i].sID);
+			$("#txt-edit-event-title").val(jData[i].sTitle);
+			$("#txt-edit-event-tag").val(jData[i].sTag);
+			$("#txt-edit-event-description").val(jData[i].sDescription);
+			$("#txt-edit-event-location").val(jData[i].sLocation);
+			$("#txt-edit-event-date").val(jData[i].sDate);
+			$("#txt-edit-event-price").val(jData[i].sPrice);
+		}
+	}
 });
+
+$(document).ready(function(e){
+	$('#frm-edit-event').on('submit',(function(e) {
+		e.preventDefault(); // do not reload
+
+		var formData = new FormData(this); // this is the form and it's data
+		console.log(formData);
+		// console.log(formData.get("title")); //GETS THE VALUE FROM FORM, NO ISSUE HERE
+		$.ajax({
+	        type:'POST',
+	        url: "api/api-edit-event.php",
+	        data: formData,
+	        cache:false,
+	        contentType: false, // ?
+	        processData: false, // ?
+		}).done(function(jData){
+			console.log(jData);
+		})
+	})
+	);
+});
+	
+
+
 
 </script>
 </body>
