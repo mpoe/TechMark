@@ -1,14 +1,14 @@
 <?php
 	// UPDATE EVENT
     // For indexing - know which event we are working with is correct
-	$sId = $_GET['id'];
+	$sId = $_POST['id'];
 	//Fields to update
-	$sEventTitle = $_GET['title'];
-	$sEventTag = $_GET['tag'];
-	$sEventDescription = $_GET['description'];
-	$sEventLocation = $_GET['location'];
-	$sEventDate = $_GET['date'];
-	$sEventPrice = $_GET['price'];
+	$sEventTitle = $_POST['title'];
+	$sEventTag = $_POST['tag'];
+	$sEventDescription = $_POST['description'];
+	$sEventLocation = $_POST['location'];
+	$sEventDate = $_POST['date'];
+	$sEventPrice = $_POST['price'];
 
 	$sFileName = "../../data/events.txt";
 

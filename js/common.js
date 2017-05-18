@@ -1,4 +1,4 @@
-/* 
+/*
     Function to get url parameters, from any value, e.g id, from, to etc.
 */
 function getUrlParameter(sParam) {
@@ -66,18 +66,53 @@ $("body").append('<footer>\
 </footer>')
 
 }
+if(window.location.href.indexOf("searchResults.html") > -1)
+  fnSearchEvents(getUrlParameter('search'));
 
 function fnSearchOnEnter() {
-
-$(".navigationSearch").keyup(function(event){
-    if(event.keyCode == 13){ //Enter key
-        window.location.href = "searchResults.html";
-    }
-
-});
-
+  $(".navigationSearch").keyup(function(event){
+      if(event.keyCode == 13)
+        window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
+  });
 }
+
+function fnSearchEvents(sWord) {
+  $('.searchTerm').val(sWord);
+  $('#search-results').html('');
+  $.getJSON('data/events.txt', function(oData) {
+    var sAppend = '<div class="row">';
+    var iCount = 0;
+    var sExp = "/" +sWord+ "/";
+
+    // TODO: When we have the right formats, do the filtering
+    $.each(oData, function(index, oEvent) {
+      if(!oEvent.sTitle.includes(sWord))
+        return true;
+
+      sAppend += '<div class="box">' +oEvent.sTitle+ '</div>';
+
+      if(iCount == 2 || index == oData.length-1) {
+        sAppend += '</div><div class="row">';
+        iCount = 0;
+      } else
+        iCount++;
+    });
+    $('#search-results').append(sAppend);
+  })
+}
+
+$(document).on("click", ".searchBtn", function(e){
+  e.preventDefault();
+  fnSearchEvents($('.searchTerm').val());
+});
+$(".searchTerm").keyup(function(event){
+    if(event.keyCode == 13)
+      fnSearchEvents($('.searchTerm').val());
+});
 
 $(document).on("click", "#btnFindMoreEvents", function(){
     window.location.href = "searchResults.html";
 });
+  window.location.href = "searchResults.html";
+});
+

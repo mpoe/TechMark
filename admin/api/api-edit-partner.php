@@ -1,11 +1,11 @@
 <?php
 	// UPDATE EVENT
     // For indexing - know which event we are working with is correct
-	$sId = $_GET['id'];
+	$sId = $_POST['id'];
 	//Fields to update
-	$sPartnerName = $_GET['title'];
-	$sPartnerWebsite = $_GET['website'];
-	$sPartnerMail = $_GET['mail'];
+	$sPartnerName = $_POST['name'];
+	$sPartnerWebsite = $_POST['website'];
+	$sPartnerMail = $_POST['mail'];
 
 	$sFileName = "../../data/partners.txt";
 
