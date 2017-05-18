@@ -1,7 +1,6 @@
 /* 
     Function to get url parameters, from any value, e.g id, from, to etc.
 */
-
 function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
@@ -16,7 +15,6 @@ function getUrlParameter(sParam) {
         }
     }
 };
-
 
 function fnAddNavigation(){
 
@@ -83,4 +81,3 @@ $(".navigationSearch").keyup(function(event){
 $(document).on("click", "#btnFindMoreEvents", function(){
     window.location.href = "searchResults.html";
 });
-
