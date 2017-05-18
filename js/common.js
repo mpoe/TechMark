@@ -25,7 +25,7 @@ function fnAddNavigation(){
 $("body").prepend('<nav class="navigation">\
 \
                   <a href="index.html" class="logolinkcontainer">\
-                    <img src="./img/techmarkLogoNoText.svg" alt="Techmark logo" class="logo"></img>\
+                    <img src="./img/TechmarkLogo.png" alt="Techmark logo" class="logo"></img>\
                   </a>\
 \
                     <div class="navitems">\
@@ -36,6 +36,7 @@ $("body").prepend('<nav class="navigation">\
                             <a href="partners.html">Partners</a>\
                             <a href="contact.html">Contact us</a>\
                             <input type="search" class="navigationSearch" placeholder="Search for events...">\
+                            <button>Search</button>\
                         </ul>\
                     </div>\
                  </nav>');

@@ -8,8 +8,7 @@
 </head>
 <body>
 
-<header>
-	<h1>Search</h1>
+<header id="eventsHeader">
 </header>
 
 <div id="wrapper">
@@ -19,9 +18,9 @@
 
 				<div class="row">
 
-					<div id="bla"><input id="filter" type="search" placeholder="Date, location, tag"></div>
+					<div id="SearchDateSelector"><input id="filter" type="search" placeholder="Date, location, tag"></div>
 
-					<form class="searchForm" method="get" action="">              
+					<form class="SearchSearchForm" method="get" action="">
 					  <input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
 					  <input type="submit" class="searchBtn" value="GO"/>
 					</form>
@@ -57,12 +56,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/common.js"></script>
+
 <script>
 
-fnAddNavigation(); 
-$(".navigationSearch").hide();
+    fnAddNavigation();
+    fnSearchOnEnter();
 
 </script>
+
 
 </body>
 </html>
