@@ -370,6 +370,11 @@ footer {
 .column-half {
   width: 50%;
 }
+
+h2.abouth2 {
+  text-align: left;
+}
+
 .space-under {
   margin-bottom: 30px;
 }
@@ -381,10 +386,19 @@ footer {
   margin: 30px 0;
 }
 
+.testimonialContainer {
+  margin: 0 1em 1em 1em;
+}
+
+.testimonialBody {
+  text-align: center;
+}
+
 .testimonalGiver {
   text-align: right;
   color: grey;
   padding-top: .5em;
+  padding-right: 1em;
 }
 
   /*Event page specific */
