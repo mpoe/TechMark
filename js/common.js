@@ -113,6 +113,4 @@ $(".searchTerm").keyup(function(event){
 $(document).on("click", "#btnFindMoreEvents", function(){
     window.location.href = "searchResults.html";
 });
-  window.location.href = "searchResults.html";
-});
 
