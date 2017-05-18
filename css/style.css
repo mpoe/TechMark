@@ -17,7 +17,7 @@ body {
 header {
   width: 100%;
   background: grey;
-  height: 15em;
+  height: 25em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ header {
   justify-content: center; }
 
 #innerWrapper {
-  margin: -5em 0;
+  margin: -15em 0;
   z-index: 100000;
   background: #fff;
   padding: 1em 0; }
@@ -43,7 +43,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1em; }
+  padding: 0 1em; }
 
 .row {
   display: flex;
@@ -51,9 +51,6 @@ header {
   margin: 1em 0;
   width: 100%;
   justify-content: space-around; }
-
-section {
-  padding: 0 3em; }
 
 button, input[type=submit] {
   /*this should become a global rule! all buttons should be the same */
@@ -84,9 +81,9 @@ button:hover, input[type=submit]:hover {
   align-items: center; }
 
 #btnFindMoreEvents {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex: 1; }
+  justify-content: center; }
 
 /*------------------------------------- Contact page specific -------------------------------------*/
 #contactHeader {
@@ -201,14 +198,13 @@ input.subject.textField {
   height: 75px; }
 
 .logo {
-  width: 75px;
-  height: 75px;
+  width: 15em;
   margin-left: 20px; }
 
 .navitems {
-  height: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-end; }
 
 .navitems a {
   font-size: 1.3em;
@@ -219,6 +215,9 @@ input.subject.textField {
 
 .navitems a:hover {
   color: #1B5E20; }
+
+.navitems button {
+  width: 10em; }
 
 .logolinkcontainer {
   display: flex;
@@ -232,11 +231,11 @@ input.subject.textField {
   color: green; }
 
 .navigationSearch {
-  margin-right: 20px;
   padding: 1em; }
 
 footer {
   background-color: #363636;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +250,7 @@ footer {
 #footerMain {
   flex-direction: row;
   display: flex;
-  margin-top: 10em;
+  margin-top: 18em;
   width: 80%; }
   #footerMain img {
     width: 15em; }
@@ -286,43 +285,61 @@ footer {
   background-size: cover; }
 
 .column-half {
-  width: 50%; }
-
-h2.abouth2 {
-  text-align: left; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .column-half img {
+    width: 350px;
+    margin-top: .2em; }
 
 .space-under {
   margin-bottom: 30px; }
 
-.img-responsive {
-  max-width: 100%; }
-
-.about-us h2 {
-  text-align: center;
-  margin: 30px 0; }
-
 .testimonialContainer {
-  margin: 0 1em 1em 1em; }
-
-.testimonialBody {
-  text-align: center; }
+  margin: 0 1em 1em 1em;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1; }
 
 .testimonalGiver {
-  text-align: right;
   color: grey;
   padding-top: .5em;
-  padding-right: 1em; }
+  padding-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1; }
 
-/*Event page specific */
-.event-date {
-  text-align: center;
-  padding: 10px;
-  background-color: pink;
-  width: 100px; }
+/* ------------------------   Event page specific  ------------------------  */
+.socialMedia-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  justify-content: center; }
 
-.social-media-calendar {
-  margin-top: 100px; }
+#EventregisterButton {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
 
+#EventSocialMedia {
+  display: flex;
+  align-items: flex-end;
+  flex: 1; }
+  #EventSocialMedia button {
+    height: 3em;
+    width: 100%; }
+  #EventSocialMedia i {
+    font-size: 2em;
+    margin: 0 .5em; }
+
+#eventMap iframe#googleMap {
+  height: 15em; }
+
+/* ------------------------   END Event page   ------------------------  */
 /* ------------------------   Admin  ------------------------  */
 #adminHeader {
   background: lightgray;
@@ -402,9 +419,10 @@ time.icon {
   background: #fff;
   box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd; }
   time.icon strong {
-    background: orange;
+    background: #028910;
     border-radius: .6em .6em 0 0;
-    padding: .3em; }
+    padding: .3em;
+    color: white; }
   time.icon span {
     font-size: 2em; }
 
@@ -461,6 +479,21 @@ section.admSecHalf {
   width: 50%; }
 
 /*-------------------------------------  searchpage -------------------------------------*/
+#eventsHeader {
+  background: url(../img/searchResultsbanner.jpg) no-repeat center;
+  background-size: cover; }
+
+#SearchDateSelector {
+  flex: 2;
+  justify-content: flex-start;
+  display: flex; }
+
+.SearchSearchForm {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center; }
+
 #filter {
   height: 3em;
   width: 13.7em;
@@ -473,7 +506,7 @@ input.searchTerm {
 
 input.searchBtn {
   height: 3em;
-  width: 3em;
+  width: 100%;
   margin: .5em 1em; }
 
 /*# sourceMappingURL=style.css.map */
