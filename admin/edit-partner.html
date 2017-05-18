@@ -21,11 +21,19 @@
 	<div class="admEdit">
 		<section>
 			<h2>Edit Page</h2>
+			<form id="frm-edit-partner" enctype="multipart/form-data">
+				<input id="txt-edit-partner-id" type="input" name="id" style="display: none">
+				<input id="txt-edit-partner-name" type="input" name="name" placeholder="name">
+				<input id="txt-edit-partner-website" type="input" name="website" placeholder="website"> 
+				<input id="txt-edit-partner-mail" type="input" name="mail" placeholder="mail">
+				<button id="btn-edit-partner" type="submit">Edit Partner</button>
+			</form>
 
-			<input type="text" placeholder="Edit Title">
-			<button>Add Media</button>
-			<textarea placeholder="Add event details here"></textarea>
-			<button id="EditPageSave">Save</button>
+			<form id="frm-edit-partner-image" enctype="multipart/form-data">
+				<input id="txt-edit-partner-image-id" type="input" name="id" style="display: none">
+				<input id="file-edit-partner-image" type="file" name="image">
+				<button id="btn-edit-partner-image" type="submit">Update image</button>
+			</form>
 		</section>
 
 	</div>
@@ -34,5 +42,60 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../js/login.js"></script>
+<script src="../js/common.js"></script>
+
+<script>
+var sIDToEdit = getUrlParameter("id");
+$.getJSON("api/api-get-all-partners.php", function(jData){
+	for(var i = 0; i<jData.length;i++){
+		if(jData[i].sID == sIDToEdit){
+			$("#txt-edit-partner-id").val(jData[i].sID);
+			$("#txt-edit-partner-image-id").val(jData[i].sID);
+			$("#txt-edit-partner-name").val(jData[i].sPartnerName);
+			$("#txt-edit-partner-website").val(jData[i].sPartnerWebsite);
+			$("#txt-edit-partner-mail").val(jData[i].sPartnerMail);
+		}
+	}
+});
+
+$('#frm-edit-partner').on('submit',(function(e) {
+	e.preventDefault(); // do not reload
+
+	var formData = new FormData(this); // this is the form and it's data
+	$.ajax({
+	        type:'POST',
+	        url: "api/api-edit-partner.php",
+	        data: formData,
+	        cache:false,
+	        contentType: false, // ?
+	        processData: false, // ?
+	}).done(function(jData){
+		console.log(jData);
+	})
+})
+);
+
+$("#frm-edit-partner-image").on('submit',function(e){
+	e.preventDefault();
+
+	var formData = new FormData(this); // this is the form and it's data
+
+	$.ajax({
+		type: 'POST',
+		url: "api/api-edit-partner-image.php",
+		data: formData,
+	    cache:false,
+	    contentType: false, // ?
+	    processData: false, // ?
+	}).done(function(jData){
+		console.log(jData);
+	})
+})
+	
+
+
+
+</script>
+
 </body>
 </html>
