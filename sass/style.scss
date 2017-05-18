@@ -65,7 +65,7 @@ header {
   display: flex;
   flex-direction: column;
   width:100%;
-  padding:1em;
+  padding: 0 1em;
 }
 
 .row {
@@ -368,37 +368,34 @@ footer {
 }
 
 .column-half {
-  width: 50%;
-}
-
-h2.abouth2 {
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: 350px;
+    margin-top: .2em;
+  }
 }
 
 .space-under {
   margin-bottom: 30px;
 }
-.img-responsive {
-  max-width: 100%;
-}
-.about-us h2 {
-  text-align: center;
-  margin: 30px 0;
-}
 
 .testimonialContainer {
   margin: 0 1em 1em 1em;
-}
-
-.testimonialBody {
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 .testimonalGiver {
-  text-align: right;
   color: grey;
   padding-top: .5em;
   padding-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
 }
 
   /*Event page specific */
