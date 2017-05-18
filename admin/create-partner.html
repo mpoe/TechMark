@@ -5,9 +5,41 @@
 </head>
 <body>
 
-</body>
+<form id="frm-create-partner" enctype="multipart/form-data">
+	<input type="input" name="name" placeholder="name">
+	<input type="input" name="website" placeholder="website"> 
+	<input type="input" name="mail" placeholder="mail">
+	<input type="file" name="image">
+	<button id="btn-create-partner" type="submit">Create Partner</button>
+</form>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../js/login.js"></script>
+
+<script>
+$('#frm-create-partner').on('submit',(function(e) {
+	//e.preventDefault(); // do not reload
+
+	var formData = new FormData(this); // this is the form and it's data
+	console.log(formData);
+	$.ajax({
+        type:'POST',
+        url: "api/api-create-partner.php",
+        data: formData,
+        cache:false,
+        contentType: false, // ?
+        processData: false, // ?
+	}).done(function(jData){
+		console.log("Hi");
+	})
+	})
+);
+
+</script>
+
+</body>
+
+
 
 </html>

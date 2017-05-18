@@ -22,7 +22,7 @@
 		<section>
 			<h2>Edit Events</h2>
 
-			<form id="frm-edit-event" action="api/api-edit-event.php" method="GET">
+			<form id="frm-edit-event">
 				<input id="txt-edit-event-id" type="input" name="id" style="display: none">
 				<input id="txt-edit-event-title" type="input" name="title" placeholder="title">
 				<input id="txt-edit-event-tag" type="input" name="tag" placeholder="tag"> 
@@ -32,6 +32,12 @@
 				<input id="txt-edit-event-price" type="input" name="price" placeholder="price">
 				
 				<button id="btn-create-event" type="submit">edit</button>
+			</form>
+
+			<form id="frm-edit-event-image" enctype="multipart/form-data">
+				<input id="txt-edit-event-image-id" type="input" name="id" style="display: none">
+				<input id="file-edit-event-image" type="file" name="image">
+				<button id="btn-edit-event-image" type="submit">Update image</button>
 			</form>
 		</section>
 
@@ -49,6 +55,7 @@ $.getJSON("api/api-get-all-events.php", function(jData){
 	for(var i = 0; i<jData.length;i++){
 		if(jData[i].sID == sIDToEdit){
 			$("#txt-edit-event-id").val(jData[i].sID);
+			$("#txt-edit-event-image-id").val(jData[i].sID);
 			$("#txt-edit-event-title").val(jData[i].sTitle);
 			$("#txt-edit-event-tag").val(jData[i].sTag);
 			$("#txt-edit-event-description").val(jData[i].sDescription);
@@ -59,28 +66,40 @@ $.getJSON("api/api-get-all-events.php", function(jData){
 	}
 });
 
-$(document).ready(function(e){
-	$('#frm-edit-event').on('submit',(function(e) {
-		e.preventDefault(); // do not reload
+$('#frm-edit-event').on('submit',(function(e) {
+	e.preventDefault(); // do not reload
 
-		var formData = new FormData(this); // this is the form and it's data
-		console.log(formData);
-		// console.log(formData.get("title")); //GETS THE VALUE FROM FORM, NO ISSUE HERE
-		$.ajax({
-	        type:'POST',
-	        url: "api/api-edit-event.php",
-	        data: formData,
-	        cache:false,
-	        contentType: false, // ?
-	        processData: false, // ?
-		}).done(function(jData){
-			console.log(jData);
-		})
+	var formData = new FormData(this); // this is the form and it's data
+	console.log(formData);
+	// console.log(formData.get("title")); //GETS THE VALUE FROM FORM, NO ISSUE HERE
+	$.ajax({
+        type:'POST',
+        url: "api/api-edit-event.php",
+        data: formData,
+        cache:false,
+        contentType: false, // ?
+        processData: false, // ?
+	}).done(function(jData){
+		console.log(jData);
 	})
-	);
-});
+}));
 	
+$("#frm-edit-event-image").on('submit',function(e){
+	e.preventDefault();
 
+	var formData = new FormData(this); // this is the form and it's data
+
+	$.ajax({
+		type: 'POST',
+		url: "api/api-edit-event-image.php",
+		data: formData,
+	    cache:false,
+	    contentType: false, // ?
+	    processData: false, // ?
+	}).done(function(jData){
+		console.log(jData);
+	})
+})
 
 
 </script>
