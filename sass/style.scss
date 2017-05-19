@@ -535,6 +535,10 @@ footer {
   }
 }
 
+.btnDeleteEvent:hover, .btnDeletePartner:hover {
+  background-color: #FF5822;
+}
+
   /*icon */
   time.icon {
     display: flex;
