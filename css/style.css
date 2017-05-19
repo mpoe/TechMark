@@ -509,4 +509,64 @@ input.searchBtn {
   width: 100%;
   margin: .5em 1em; }
 
+/*------------------------------------------------------------------------------------------------*/
+/*-------------------------------------  RESPONSIVE STYLING  -------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+/* Mobiles up to 426 */
+@media only screen and (max-width: 426px) {
+  #contentContainer {
+    width: 100vw; }
+
+  .row {
+    flex-direction: column; }
+
+  input.textField {
+    width: 100%;
+    margin: 1em 0; }
+
+  #contactForm textarea {
+    margin: 1em 0; }
+
+  /*About specific*/
+  .column-half img {
+    width: 100%; }
+
+  .innerRow {
+    flex-direction: column; }
+    .innerRow p {
+      padding: 0;
+      margin: 1em 0; }
+
+  /*partners*/
+  .partnerBox {
+    flex-direction: column; }
+
+  .leftpanel {
+    width: 100%; }
+
+  .rpButton {
+    width: 100%;
+    margin-top: 2em; }
+
+  #iconRow {
+    flex-direction: column;
+    align-items: center; }
+
+  /*event specific */
+  .event-date {
+    width: 5.5em; }
+
+  .column-half {
+    align-items: center; }
+
+  #EventregisterButton {
+    margin: 2em; }
+
+  #EventSocialMedia {
+    flex-wrap: wrap;
+    justify-content: center; }
+
+  #EventSocialMedia i {
+    margin: 0.7em; } }
+
 /*# sourceMappingURL=style.css.map */
