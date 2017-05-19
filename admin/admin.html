@@ -53,7 +53,7 @@
                    <span>14:00 - 16:00</span>
                    <div>
                        <button>Edit</button>
-                       <button>Delete</button>
+                       <button class="btnDelete">Delete</button>
                    </div>
                </div>
             </div>
@@ -69,7 +69,7 @@
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="btnDelete">Delete</button>
                     </div>
                 </div>
                 <div class="row">
@@ -82,7 +82,7 @@
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="btnDelete">Delete</button>
                     </div>
                 </div>
                 <div class="row">
@@ -95,7 +95,7 @@
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="btnDelete">Delete</button>
                     </div>
                 </div>
                 <div class="row">
@@ -108,7 +108,7 @@
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="btnDelete">Delete</button>
                     </div>
                 </div>
                 <div class="row">
@@ -121,7 +121,7 @@
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button>Delete</button>
+                        <button class="btnDelete">Delete</button>
                     </div>
                 </div>
             </div>
@@ -230,6 +230,11 @@ $('#frm-create-user').on('submit',(function(e) {
 	})
 	})
 );
+
+$(document).on("click",".btnDelete", function(){
+    $(this).parent().parent().remove();
+    //TO:DO Pass the ID to our api to also delete from the textfile.
+});
 
 
 </script>
