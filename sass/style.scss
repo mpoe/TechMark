@@ -90,6 +90,15 @@ button:hover, input[type=submit]:hover {
   cursor: pointer;
 }
 
+#btnMenuSearch {
+    position: relative;
+    z-index: 1;
+    left: -30px;
+    top: 1px;
+    cursor:pointer;
+    width: 0;
+}
+
 /*-------------------------------------  index -------------------------------------*/
 
 #fpHeader {
@@ -301,7 +310,9 @@ input.subject.textField {
 
 .navigationSearch {
   padding:1em;
+  margin-right: 5px;
   }
+
 
 footer {
   background-color: #363636;

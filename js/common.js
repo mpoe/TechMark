@@ -33,8 +33,8 @@ $("body").prepend('<nav class="navigation">\
                             <a href="about-us.html">About us</a>\
                             <a href="partners.html">Partners</a>\
                             <a href="contact.html">Contact us</a>\
-                            <input type="search" class="navigationSearch" placeholder="Search for events...">\
-                            <button>Search</button>\
+                            <input class="navigationSearch" placeholder="Search for events...">\
+                            <i id="btnMenuSearch" class="fa fa-search"></i>\
                         </ul>\
                     </div>\
                  </nav>');
@@ -69,12 +69,19 @@ $("body").append('<footer>\
 if(window.location.href.indexOf("searchResults.html") > -1)
   fnSearchEvents(getUrlParameter('search'));
 
+
+//In the header menu, you can search by clicking enter, or pressing the search icon.
 function fnSearchOnEnter() {
   $(".navigationSearch").keyup(function(event){
       if(event.keyCode == 13)
         window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
   });
 }
+
+$(document).on("click", "#btnMenuSearch", function(e){
+  window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
+});
+
 
 function fnSearchEvents(sWord) {
   var date = new Date();
@@ -120,6 +127,8 @@ $(document).on("click", ".searchBtn", function(e){
   e.preventDefault();
   fnSearchEvents($('.searchTerm').val());
 });
+
+
 $(".searchTerm").keyup(function(event){
     if(event.keyCode == 13)
       fnSearchEvents($('.searchTerm').val());
