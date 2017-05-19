@@ -9,8 +9,7 @@
 </head>
 <body>
 
-<header id="eventsHeader">
-</header>
+<header id="eventsHeader">Search Results</header>
 
 <div id="wrapper">
 	<div id="innerWrapper">
@@ -19,36 +18,21 @@
 
 				<div class="row">
 
-					<div id="SearchDateSelector"><input id="filter" type="search" placeholder="Date, location, tag"></div>
+					<div>
+						<input id="date" type="text" placeholder="Date">
+						<input id="location" type="text" placeholder="Location">
+						<input id="tags" type="text" placeholder="Tag">
+					</div>
 
-					<form class="SearchSearchForm" method="get" action="">
-						<input class="searchTerm"  placeholder="Search…" autocomplete="off"/>
-						<input type="submit" class="searchBtn" value="GO"/>
+					<form class="searchForm" method="get" action="">
+					  <input class="searchTerm" placeholder="Search…" autocomplete="off"/>
+					  <input type="submit" class="searchBtn" value="SEARCH"/>
 					</form>
 
-
 				</div>
 
 			</div>
-			<div>
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
-				</div>
-
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
-				</div>
-
-				<div class="row">
-					<div class="box">box 1</div>
-					<div class="box">box 2</div>
-					<div class="box">box 3</div>
-				</div>
-			</div>
+			<div id="search-results"></div>
 
 		</div>
 	</div> <!-- inner wrapper -->

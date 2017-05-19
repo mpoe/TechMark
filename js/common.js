@@ -77,6 +77,12 @@ function fnSearchOnEnter() {
 }
 
 function fnSearchEvents(sWord) {
+  var date = new Date();
+  var day = date.getDate();
+  var month = ("0" + (date.getMonth() + 1)).slice(-2)
+  var year = date.getFullYear();
+
+  $('#date').attr('placeholder', year+ '-' +month+ '-' +day);
   $('.searchTerm').val(sWord);
   $('#search-results').html('');
   $.getJSON('data/events.txt', function(oData) {
@@ -86,7 +92,16 @@ function fnSearchEvents(sWord) {
 
     // TODO: When we have the right formats, do the filtering
     $.each(oData, function(index, oEvent) {
-      if(!oEvent.sTitle.includes(sWord))
+      if(sWord != "" && !oEvent.sTitle.includes(sWord))
+        return true;
+
+      if($('#location').val() != "" && !oEvent.sLocation.includes($('#location').val()))
+        return true;
+
+      if($('#tags').val() != "" && !oEvent.sTag.includes($('#tags').val()))
+        return true;
+
+      if($('#date').val() != "" && oEvent.sDate != $('#date').val())
         return true;
 
       sAppend += '<div class="box">' +oEvent.sTitle+ '</div>';

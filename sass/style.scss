@@ -290,7 +290,7 @@ input.subject.textField {
   display: flex;
   align-items: center;
   flex: 1;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
 
 .partner {
@@ -638,7 +638,7 @@ section.admSecHalf {
     padding-left: 1em;
 }
 
-  input.searchTerm {
+  input.searchTerm, input#date, input#location, input#tags {
     height: 3em;
     padding-left: 1em;
   }
