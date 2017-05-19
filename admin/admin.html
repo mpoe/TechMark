@@ -36,7 +36,7 @@
             <label for="tab4">Add Partners</label>
 
             <input id="tab5" type="radio" name="tabs">
-            <label for="tab5">Add Edit Users</label>
+            <label for="tab5">Add Users</label>
 
             <!-- Tab content -->
         <div class="admContent">
@@ -131,11 +131,16 @@
                 <div class="row">
                     <div class="admEdit">
                         <section>
-                            <h2>Add Events</h2>
-                            <input type="text" placeholder="Edit Title">
-                            <button>Add Media</button>
-                            <textarea placeholder="Add event details here"></textarea>
-                            <button id="addPartnerSave">Add event</button>
+                        <form id="frm-create-event" enctype="multipart/form-data">
+							<input type="input" name="title" placeholder="title">
+							<input type="input" name="tag" placeholder="tag"> 
+							<input type="textarea" name="description" placeholder="Description">
+							<input type="input" name="location" placeholder="location">
+							<input type="input" name="price" placeholder="price">
+							<input type="date" name="date">
+							<input type="file" name="image">
+						<button id="btn-create-event" type="submit">Create event</button>
+						</form>
                         </section>
                     </div>
                 </div>
@@ -145,12 +150,13 @@
                 <div class="row">
                     <div class="admEdit">
                         <section>
-                            <h2>Add Partners</h2>
-
-                            <input type="text" placeholder="Edit Title">
-                            <button>Add Media</button>
-                            <textarea placeholder="Add event details here"></textarea>
-                            <button id="addEventSave">Add Partner</button>
+						<form id="frm-create-partner" enctype="multipart/form-data">
+							<input type="input" name="name" placeholder="name">
+							<input type="input" name="website" placeholder="website"> 
+							<input type="input" name="mail" placeholder="mail">
+							<input type="file" name="image">
+							<button id="btn-create-partner" type="submit">Create Partner</button>
+						</form>
                         </section>
 
                     </div>
@@ -160,18 +166,73 @@
             <div id="AddUser">
                 <div class="row">
                     <section>
-                        <h2>Add Users</h2>
-
-                        <input type="text" placeholder="User name">
-                        <input type="text" placeholder="Password">
-                        <button>Add Media</button>
-                        <button id="AddUserSave">Add user</button>
+						<form id="frm-create-user" enctype="multipart/form-data">
+							<input type="input" name="username" placeholder="username">
+							<input type="input" name="password" placeholder="password"> 
+							<button id="btn-create-user" type="submit">Create User</button>
+						</form>
                     </section>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../js/login.js"></script>
+
+<script>
+$('#frm-create-event').on('submit',(function(e) {
+	//e.preventDefault(); // do not reload
+	var formData = new FormData(this); // this is the form and it's data
+	console.log(formData);
+	$.ajax({
+        type:'POST',
+        url: "api/api-create-event.php",
+        data: formData,
+        cache:false,
+        contentType: false, // ?
+        processData: false, // ?
+	}).done(function(jData){
+		console.log("Hi");
+	})
+	})
+);
+
+$('#frm-create-partner').on('submit',(function(e) {
+	//e.preventDefault(); // do not reload
+	var formData = new FormData(this); // this is the form and it's data
+	console.log(formData);
+	$.ajax({
+        type:'POST',
+        url: "api/api-create-partner.php",
+        data: formData,
+        cache:false,
+        contentType: false, // ?
+        processData: false, // ?
+	}).done(function(jData){
+		console.log("Hi");
+	})
+	})
+);
+$('#frm-create-user').on('submit',(function(e) {
+	//e.preventDefault(); // do not reload
+	var formData = new FormData(this); // this is the form and it's data
+	console.log(formData);
+	$.ajax({
+        type:'POST',
+        url: "api/api-create-user.php",
+        data: formData,
+        cache:false,
+        contentType: false, // ?
+        processData: false, // ?
+	}).done(function(jData){
+		console.log("Hi");
+	})
+	})
+);
+
+
+</script>
 
 </body>
 </html>

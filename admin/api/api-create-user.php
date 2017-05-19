@@ -1,7 +1,7 @@
 <?php
 	// CREATE USER
-	$sUserName = $_GET['username'];
-	$sPassword = $_GET['password'];
+	$sUserName = $_POST['username'];
+	$sPassword = $_POST['password'];
 
 	// file to get contents to compare with
 	$sFileName = "../../data/users.txt"; // This is the file+path to it
