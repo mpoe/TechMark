@@ -438,8 +438,8 @@ time.icon {
 #partners img {
   width: 5em; }
 
-/* This is used for deleting events based on the ID, and is not shown to the user */
-.eventID {
+/* This is used for deleting events & partners based on the ID, and is not shown to the user */
+.eventID, .partnerID {
   display: none; }
 
 /* ------------------------   ADMIN EDIT PAGE -------------------------------------*/

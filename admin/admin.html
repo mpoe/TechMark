@@ -54,7 +54,7 @@
                    <span>14:00 - 16:00</span>
                    <div>
                        <button>Edit</button>
-                       <button class="btnDelete">Delete</button>
+                       <button class="btnDeleteEvent">Delete</button>
                    </div>
                </div>
             </div>
@@ -64,65 +64,65 @@
                     <div>
                         <img src="../img/admin/travelBirdsLogoNoText.png">
                     </div>
-
+                   <span class="partnerID">1</span>
                     <span>Some event in Copenhagen</span>
                     <time>5/6/2017</time>
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button class="btnDelete">Delete</button>
+                        <button class="btnDeletePartner">Delete</button>
                     </div>
                 </div>
                 <div class="row">
                     <div>
                         <img src="../img/admin/simGarden.jpg">
                     </div>
-
+                    <span class="partnerID">2</span>
                     <span>Some event in Copenhagen</span>
                     <time>5/6/2017</time>
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button class="btnDelete">Delete</button>
+                        <button class="btnDeletePartner">Delete</button>
                     </div>
                 </div>
                 <div class="row">
                     <div>
                         <img src="../img/admin/peer2play.jpg">
                     </div>
-
+                    <span class="partnerID">3</span>
                     <span>Some event in Copenhagen</span>
                     <time>5/6/2017</time>
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button class="btnDelete">Delete</button>
+                        <button class="btnDeletePartner">Delete</button>
                     </div>
                 </div>
                 <div class="row">
                     <div>
                         <img src="../img/admin/memoverlogo.png">
                     </div>
-
+                    <span class="partnerID">4</span>
                     <span>Some event in Copenhagen</span>
                     <time>5/6/2017</time>
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button class="btnDelete">Delete</button>
+                        <button class="btnDeletePartner">Delete</button>
                     </div>
                 </div>
                 <div class="row">
                     <div>
                         <img src="../img/techmarkLogoNoText.svg">
                     </div>
-
+                    <span class="partnerID">5</span>
                     <span>Some event in Copenhagen</span>
                     <time>5/6/2017</time>
                     <time>14:00 - 16:00</time>
                     <div>
                         <button>Edit</button>
-                        <button class="btnDelete">Delete</button>
+                        <button class="btnDeletePartner">Delete</button>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@ $('#frm-create-user').on('submit',(function(e) {
 	})
 );
 
-$(document).on("click",".btnDelete", function(jData){
+$(document).on("click",".btnDeleteEvent", function(jData){
 
     var sIDToDelete = $(this).parent().siblings(".eventID").text();
     var sURL = "api/api-delete-event.php?id="+sIDToDelete;
@@ -241,6 +241,19 @@ $(document).on("click",".btnDelete", function(jData){
     $.get(sURL, function(){
         $(oTheParent).fadeOut(200);
         console.log("Event #"+sIDToDelete+" deleted!")
+    });
+
+});
+
+$(document).on("click",".btnDeletePartner", function(jData){
+
+    var sIDToDelete = $(this).parent().siblings(".partnerID").text();
+    var sURL = "api/api-delete-partner.php?id="+sIDToDelete;
+    var oTheParent = $(this).parent().parent();
+
+    $.get(sURL, function(){
+        $(oTheParent).fadeOut(200);
+        console.log("Partner #"+sIDToDelete+" deleted!")
     });
 
 });
