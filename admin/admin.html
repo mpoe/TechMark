@@ -48,6 +48,7 @@
                        <em>Saturday</em>
                    </time>
 
+                   <span class="eventID">1</span>
                    <span>Some event in Copenhagen</span>
                    <span>5/6/2017</span>
                    <span>14:00 - 16:00</span>
@@ -231,9 +232,17 @@ $('#frm-create-user').on('submit',(function(e) {
 	})
 );
 
-$(document).on("click",".btnDelete", function(){
-    $(this).parent().parent().remove();
-    //TO:DO Pass the ID to our api to also delete from the textfile.
+$(document).on("click",".btnDelete", function(jData){
+
+    var sIDToDelete = $(this).parent().siblings(".eventID").text();
+    var sURL = "api/api-delete-event.php?id="+sIDToDelete;
+    var oTheParent = $(this).parent().parent();
+
+    $.get(sURL, function(){
+        $(oTheParent).fadeOut(200);
+        console.log("Event #"+sIDToDelete+" deleted!")
+    });
+
 });
 
 

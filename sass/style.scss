@@ -560,6 +560,11 @@ footer {
   width: 5em;
 }
 
+/* This is used for deleting events based on the ID, and is not shown to the user */
+.eventID {
+  display: none;
+}
+
 /* ------------------------   ADMIN EDIT PAGE -------------------------------------*/
 .admEdit {
   display: flex;
