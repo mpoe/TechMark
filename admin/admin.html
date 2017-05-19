@@ -41,22 +41,8 @@
             <!-- Tab content -->
         <div class="admContent">
             <div id="events">
-               <div class="row">
-                   <time datetime="2014-09-20" class="icon">
-                       <strong>September</strong>
-                       <span>20</span>
-                       <em>Saturday</em>
-                   </time>
 
-                   <span class="eventID">1</span>
-                   <span>Some event in Copenhagen</span>
-                   <span>5/6/2017</span>
-                   <span>14:00 - 16:00</span>
-                   <div>
-                       <button>Edit</button>
-                       <button class="btnDeleteEvent">Delete</button>
-                   </div>
-               </div>
+
             </div>
 
             <div id="partners">
@@ -182,6 +168,47 @@
 <script src="../js/login.js"></script>
 
 <script>
+
+//Grab events when page loads.
+
+fnGetAllEvents();
+
+function fnGetAllEvents(){
+
+        var sEvent = '<div class="row">\
+                             <time datetime="{{eventdatecalender}}" class="icon">\
+                             <strong>September</strong>\
+                             <span>20</span>\
+                             <em>Saturday</em>\
+                             </time>\
+                             <span class="eventID">{{eventid}}</span>\
+                             <span>{{eventtitle}}</span>\
+                             <span>{{eventdate}}</span>\
+                             <span>{{eventprice}}</span>\
+                            <div>\
+                            <button>Edit</button>\
+                            <button class="btnDeleteEvent">Delete</button>\
+                   </div>\
+               </div>';
+
+    var sURL = "api/api-get-all-events.php";
+
+    $.getJSON(sURL, function(jData){
+
+        $("#events").empty(); //clear before appending.
+        for(var i = 0; i < jData.length; i++){
+            var sEventTemplate = sEvent;
+            sEventTemplate = sEventTemplate.replace( "{{eventdatecalender}}", jData[i].sDate);
+            sEventTemplate = sEventTemplate.replace( "{{eventid}}", jData[i].sID);
+            sEventTemplate = sEventTemplate.replace( "{{eventtitle}}", jData[i].sTitle);
+            sEventTemplate = sEventTemplate.replace( "{{eventdate}}", jData[i].sDate);
+            sEventTemplate = sEventTemplate.replace( "{{eventprice}}", jData[i].sPrice);
+            $("#events").append(sEventTemplate);
+        };
+    });
+}
+
+
 $('#frm-create-event').on('submit',(function(e) {
 	//e.preventDefault(); // do not reload
 	var formData = new FormData(this); // this is the form and it's data
