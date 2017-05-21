@@ -93,7 +93,7 @@ button:hover, input[type=submit]:hover {
 #btnMenuSearch {
     position: relative;
     z-index: 1;
-    left: -30px;
+    left: -35px;
     top: 1px;
     cursor:pointer;
     width: 0;
@@ -263,7 +263,7 @@ input.subject.textField {
 /* ------------------------   NAVIGATION (Header + Footer) -------------------------------------*/
 
 .navigation {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #363636;
   width: 100vw;
   display: flex;
   height: 75px;
@@ -285,10 +285,10 @@ input.subject.textField {
   text-decoration: none;
   padding: 10px;
   margin: 15px 20px 0px 20px;
-  color: black;
+  color: #ffffff;
 }
 .navitems a:hover{
-  color: #1B5E20;
+  color: #028910;
 }
 
 .navitems button {
@@ -310,7 +310,7 @@ input.subject.textField {
 
 .navigationSearch {
   padding:1em;
-  margin-right: 5px;
+  margin-right: 10px;
   }
 
 
@@ -755,4 +755,18 @@ section.admSecHalf {
   #EventSocialMedia i {
     margin: 0.7em;
   }
+  .footerLevel1 {
+    width:80%;
+    button {
+      width:100%;
+    }
+    input {
+      padding: 1em;
+      width: 100%;
+    }
+  }
+  .centerfooter, .rightfooter {
+    margin-top: 1em;
+  }
+
 }
