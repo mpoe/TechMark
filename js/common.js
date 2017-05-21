@@ -43,28 +43,36 @@ $("body").prepend('<nav class="navigation">\
 
 $("body").append('<footer>\
     <div id="footerMain">\
-    <div class="leftfooter">\
-              <img src="./img/techmarkWhite.png" alt="Techmark logo" class="footerlogo">\
+        <div class="row footerLevel1">\
+        <h3>Subscribe to our newsletter</h3>\
+    <input type="text" class="txtSubscribe" placeholder="Enter your email">\
+        <button class="btnSubscribe">Subscribe</button>\
+        </div>\
+        <div class="row footerLevel2">\
+        <div class="leftfooter">\
+        <img src="./img/techmarkWhite.png" alt="Techmark logo" class="footerlogo">\
+        </div>\
+        <div class="centerfooter">\
+        <div >\
+        <ul>\
+        <li>Email: info@techmark.dk</li>\
+    <li>Phone: (+45) 51 22 11 92</li>\
+    <li>Address: Nørregade 26, KBH K 1165</li>\
+    </ul>\
     </div>\
-    <div class="centerfooter">\
-            <div >\
-                <ul>\
-                        <li>Email: info@techmark.dk</li>\
-                        <li>Phone: (+45) 51 22 11 92</li>\
-                        <li>Address: Nørregade 26 1.sal tv KBH K 1165</li>\
-                        <li>Opening hours: 10:00 to 16:00 Monday to Friday</li>\
-                </ul>\
-            </div>\
     </div>\
     <div class="rightfooter">\
-        <h3>Subscribe to our newsletter</h3>\
-        <input type="text" class="txtSubscribe" placeholder="Enter your email">\
-        <button class="btnSubscribe">Subscribe</button>\
-    </div>\
-    </div>\
-    <div id="footerUnder"><p>Copyright TechMark A/S - All rights reserved</p></div>\
-</footer>')
-
+        <div id="socialMedia">\
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>\
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>\
+        <i class="fa fa-instagram" aria-hidden="true"></i>\
+        <i class="fa fa-google-plus-square" aria-hidden="true"></i>\
+        </div>\
+        </div>\
+        </div>\
+        </div>\
+        <div id="footerUnder"><p>Copyright TechMark A/S - All rights reserved</p></div>\
+    </footer>')
 }
 if(window.location.href.indexOf("searchResults.html") > -1)
   fnSearchEvents(getUrlParameter('search'));

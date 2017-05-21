@@ -257,7 +257,7 @@ footer {
     color: black; }
 
 #footerMain {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   margin-top: 18em;
   width: 80%; }
@@ -266,23 +266,31 @@ footer {
   #footerMain li {
     list-style-type: none; }
 
+.footerLevel1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto; }
+  .footerLevel1 h3 {
+    padding-bottom: .3em; }
+  .footerLevel1 button {
+    width: 50%; }
+  .footerLevel1 input {
+    padding: 1em;
+    width: 50%; }
+
+.footerLevel2 {
+  margin-top: 3em; }
+
 .leftfooter, .centerfooter, .rightfooter {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.rightfooter {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
-  .rightfooter h3 {
-    padding-bottom: .3em; }
-  .rightfooter button {
-    width: 50%; }
-  .rightfooter input {
-    padding: 1em;
-    width: 50%; }
+.centerfooter {
+  text-align: center; }
 
 #footerUnder {
   margin-top: 2em;
