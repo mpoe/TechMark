@@ -145,3 +145,10 @@ $(".searchTerm").keyup(function(event){
 $(document).on("click", "#btnFindMoreEvents", function(){
   window.location.href = "searchResults.html";
 });
+
+/*Responsive menu toggling */
+    $(function($){
+        $( '.menu-btn' ).click(function(){
+            $('.responsive-menu').toggleClass('expand')
+        })
+    })
