@@ -33,7 +33,7 @@ $("body").prepend('<nav class="navigation">\
             <a href="contact.html">Contact us</a>\
             <div class="menuSearch">\
                 <input class="navigationSearch" placeholder="Search for events...">\
-                <button class="fa">&#xf002;</button>\
+                <button class="btnMenuSearch fa">&#xf002;</button>\
             </div>\
           </ul>\
         </div>\
@@ -54,8 +54,7 @@ $("body").prepend('<nav class="navigation">\
                   <a href="contact.html">Contact us</a>\
               <div class="menuSearch">\
                    <input class="navigationSearch" placeholder="Search for events...">\
-                   <i class="btnMenuSearch" class="fa fa-search"></i>\
-                   <button class="fa">&#xf002;</button>\
+                   <button class="btnMenuSearch fa">&#xf002;</button>\
               </div>\
             </ul>\
     </div>\
@@ -109,7 +108,7 @@ function fnSearchOnEnter() {
   });
 }
 
-$(document).on("click", "#btnMenuSearch", function(e){
+$(document).on("click", ".btnMenuSearch", function(e){
   window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
 });
 
