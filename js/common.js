@@ -21,23 +21,46 @@ function fnAddNavigation(){
 //Prepend the header navigation (1st item in body)
 
 $("body").prepend('<nav class="navigation">\
-\
-                  <a href="index.html" class="logolinkcontainer">\
-                    <img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></img>\
-                  </a>\
-\
-                    <div class="navitems">\
-                        <ul>\
-                            <a href="index.html">Home</a>\
-                            <a href="searchResults.html">Events</a>\
-                            <a href="about-us.html">About us</a>\
-                            <a href="partners.html">Partners</a>\
-                            <a href="contact.html">Contact us</a>\
-                            <input class="navigationSearch" placeholder="Search for events...">\
-                            <i id="btnMenuSearch" class="fa fa-search"></i>\
-                        </ul>\
-                    </div>\
-                 </nav>');
+    <a href="index.html" class="logolinkcontainer">\
+        <img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></img>\
+        </a>\
+        <div class="navitems">\
+          <ul>\
+            <a href="index.html">Home</a>\
+            <a href="searchResults.html">Events</a>\
+            <a href="about-us.html">About us</a>\
+            <a href="partners.html">Partners</a>\
+            <a href="contact.html">Contact us</a>\
+            <div class="menuSearch">\
+                <input class="navigationSearch" placeholder="Search for events...">\
+                <button class="fa">&#xf002;</button>\
+            </div>\
+          </ul>\
+        </div>\
+        <div class="mobile-nav">\
+        <div class="menu-btn" id="menu-btn">\
+          <div>\
+          <span></span>\
+          <span></span>\
+          <span></span>\
+          </div>\
+        </div>\
+          <div class="responsive-menu">\
+            <ul id="mobileMenu">\
+                  <a href="index.html">Home</a>\
+                  <a href="searchResults.html">Events</a>\
+                  <a href="about-us.html">About us</a>\
+                  <a href="partners.html">Partners</a>\
+                  <a href="contact.html">Contact us</a>\
+              <div class="menuSearch">\
+                   <input class="navigationSearch" placeholder="Search for events...">\
+                   <i class="btnMenuSearch" class="fa fa-search"></i>\
+                   <button class="fa">&#xf002;</button>\
+              </div>\
+            </ul>\
+    </div>\
+    </div>\
+    </nav>');
 
 //Append the footer (last item in body)
 
