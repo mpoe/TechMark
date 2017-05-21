@@ -23,7 +23,7 @@ function fnAddNavigation(){
 $("body").prepend('<nav class="navigation">\
 \
                   <a href="index.html" class="logolinkcontainer">\
-                    <img src="./img/TechmarkLogo.png" alt="Techmark logo" class="logo"></img>\
+                    <img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></img>\
                   </a>\
 \
                     <div class="navitems">\
