@@ -311,7 +311,12 @@ nav ul {
   color: green; }
 
 .navigationSearch {
-  padding: 1em; }
+  padding: 1em;
+  width: 0;
+  transition: width 600ms; }
+
+.navigationSearch:active, .navigationSearch:hover, .navigationSearch:focus {
+  width: 14em; }
 
 footer {
   background-color: #363636;
@@ -416,6 +421,10 @@ footer {
     width: 5em;
     margin-left: 2em;
     margin-top: -.1em; }
+
+/*brings out the search when you hover.*/
+.menuSearch:hover .navigationSearch, .menuSearch:active .navigationSearch, .menuSearch:focus .navigationSearch {
+  width: 14em; }
 
 /* ------------------------   ABOUT US PAGE -------------------------------------*/
 #aboutUsHeader {
