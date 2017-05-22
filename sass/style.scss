@@ -719,19 +719,19 @@ section.admSecHalf {
   display: flex;
 }
 
-.SearchSearchForm {
+
+
+.searchForm {
   display: flex;
   align-items: center;
-  flex: 1;
-  justify-content: center;
 }
 
-#filter {
-    height: 3em;
-    width: 13.7em;
-    margin: .5em 1.2em;
-    padding-left: 1em;
+#SRFilter {
+  display: flex;
+  align-items: center;
 }
+
+
 
   input.searchTerm, input#date, input#location, input#tags {
     height: 3em;
@@ -740,8 +740,7 @@ section.admSecHalf {
 
   input.searchBtn {
     height: 3em;
-    width: 100%;
-    margin: .5em 1em;
+    width: 10em;
   }
 
 /*------------------------------------------------------------------------------------------------*/
