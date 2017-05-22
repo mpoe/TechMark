@@ -59,7 +59,8 @@ button, input[type=submit] {
   background-color: #028910;
   color: #fff;
   font-weight: 800;
-  border: 0; }
+  border: 0;
+  transition: background-color 1s; }
 
 button:hover, input[type=submit]:hover {
   background-color: #015F0B;
@@ -86,7 +87,6 @@ button:hover, input[type=submit]:hover {
 .box {
   height: 20em;
   width: 20em;
-  background: blue;
   margin: .5em 1em;
   display: flex;
   justify-content: center;
@@ -134,13 +134,21 @@ button:hover, input[type=submit]:hover {
 
 i.fa.fa-map-marker {
   padding: 0.3em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   width: 1.6em;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
   background: #028910;
-  color: white; }
+  color: #fff;
+  border: 1px solid #028910;
+  transition: background-color 2s; }
+
+i.fa.fa-map-marker:hover {
+  background: #fff;
+  cursor: pointer;
+  color: #028910;
+  border: 1px solid #028910; }
 
 #btnFindMoreEvents {
   width: 100%;
@@ -628,8 +636,7 @@ section.admSecHalf {
 
 .events a.box {
   color: black;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 #SRFilter {
   display: flex;
