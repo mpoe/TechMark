@@ -100,8 +100,12 @@ button:hover, input[type=submit]:hover {
 }
 
 /*-------------------------------------  index -------------------------------------*/
+#fpHeaderBanner {
+  background: url(../img/fpHeader.jpg) no-repeat center;
+  background-size:cover;
+}
 
-#fpHeader {
+#fpWrapperHeader {
   display: flex;
   align-items: center;
   flex-direction: column;
