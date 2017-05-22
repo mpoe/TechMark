@@ -303,6 +303,7 @@ nav ul {
   display: flex;
   align-items: center;
   flex: 1;
+  padding-top: 3px;
   justify-content: flex-start;
 }
 
@@ -626,7 +627,7 @@ footer {
     strong {
       background: #028910;
       border-radius: .6em .6em 0 0;
-      padding: .3em;
+      padding: .3em 1em;
       color: white;
     }
 
@@ -724,6 +725,11 @@ section.admSecHalf {
 .searchForm {
   display: flex;
   align-items: center;
+}
+
+.events a.box {
+  color: black;
+  text-decoration: none;
 }
 
 #SRFilter {
