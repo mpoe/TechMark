@@ -100,8 +100,12 @@ button:hover, input[type=submit]:hover {
 }
 
 /*-------------------------------------  index -------------------------------------*/
+#fpHeaderBanner {
+  background: url(../img/fpHeader.jpg) no-repeat center;
+  background-size:cover;
+}
 
-#fpHeader {
+#fpWrapperHeader {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -132,7 +136,7 @@ button:hover, input[type=submit]:hover {
 .eventimg {
     display: flex;
     flex: 1;
-    z-index: 0;
+    max-width:100%
 }
 
 .price {
