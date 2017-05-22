@@ -1,9 +1,9 @@
 [
     {
         "sID": "1",
-        "sPartnerName": "Google233344",
-        "sPartnerWebsite": "google.com",
-        "sPartnerMail": "google2333",
-        "sPartnerLogo": "ba.jpg"
+        "sPartnerName": "Microsoft",
+        "sPartnerWebsite": "microsoft.com",
+        "sPartnerMail": "microsoft@microsoft.com",
+        "sPartnerLogo": "htx.jpg"
     }
 ]
