@@ -1,41 +1,12 @@
 [
     {
         "sID": "1",
-        "sTitle": "adminMINGv23",
-        "sTag": "admin",
-        "sDescription": "admin",
-        "sLocation": "admin",
-        "sDate": "2017-05-19",
-        "sPrice": "admin"
-    },
-    {
-        "sID": "2",
-        "sTitle": "asda22233dddd",
-        "sTag": "sdasd",
-        "sDescription": "asdasd",
-        "sLocation": "asdasd",
-        "sDate": "",
-        "sPrice": "asdasd",
-        "sImage": "baOG.jpg"
-    },
-    {
-        "sID": "3",
-        "sTitle": "Learn 2 code",
-        "sTag": "php",
-        "sDescription": "learn to code",
-        "sLocation": "basement",
-        "sDate": "2017-05-15",
+        "sTitle": "Artificial Inteligence",
+        "sTag": "ai, IT, kea",
+        "sDescription": "Artificial Inteligence is very clever.",
+        "sLocation": "Lygten 16",
+        "sDate": "2017-05-28",
         "sPrice": "free",
-        "sImage": "OJ.jpg"
-    },
-    {
-        "sID": "4",
-        "sTitle": "Make your dreams",
-        "sTag": "come true",
-        "sDescription": "My desc",
-        "sLocation": "heaven",
-        "sDate": "2017-05-30",
-        "sPrice": "999999999",
-        "sImage": "ca.jpg"
+        "sImage": "kea.png"
     }
 ]
