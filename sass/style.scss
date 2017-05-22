@@ -365,9 +365,12 @@ nav ul {
   text-decoration: none;
   margin: 1em;
   color: #ffffff;
+  transition: border-bottom 1s;
+  border-bottom: 1px solid #363636;
 }
 .navitems a:hover{
   color: #028910;
+  border-bottom: 1px solid #fff;
 }
 
 .navitems button {
