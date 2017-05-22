@@ -908,6 +908,10 @@ section.admSecHalf {
   text-decoration: none;
 }
 
+#EventSocialMedia i:hover {
+  color: #028910;
+}
+
 #SRFilter {
   display: flex;
   align-items: center;
@@ -999,6 +1003,11 @@ section.admSecHalf {
   #EventSocialMedia i {
     margin: 0.7em;
   }
+
+  #EventSocialMedia i:hover {
+    color: #028910;
+  }
+
   .footerLevel1 {
     width:80%;
     button {

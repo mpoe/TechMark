@@ -736,6 +736,9 @@ section.admSecHalf {
   color: black;
   text-decoration: none; }
 
+#EventSocialMedia i:hover {
+  color: #028910; }
+
 #SRFilter {
   display: flex;
   align-items: center; }
@@ -807,6 +810,9 @@ input.searchBtn {
 
   #EventSocialMedia i {
     margin: 0.7em; }
+
+  #EventSocialMedia i:hover {
+    color: #028910; }
 
   .footerLevel1 {
     width: 80%; }
