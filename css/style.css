@@ -167,6 +167,9 @@ i.fa.fa-map-marker {
   #socialMedia .fa {
     font-size: 3em;
     padding: .2em; }
+  #socialMedia .fa:hover {
+    color: #028910;
+    cursor: pointer; }
 
 #googleMap {
   width: 100%; }
