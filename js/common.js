@@ -20,9 +20,9 @@ function fnAddNavigation(){
 //Prepend the header navigation (1st item in body)
 
 $("header").prepend('<nav class="navigation">\
-    <a href="index.html" class="logolinkcontainer">\
-        <img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></img>\
-      </a>\
+    <div class="logolinkcontainer">\
+        <a href="index.html"><img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></a>\
+      </div>\
     </div>\
     <div class="navitems">\
       <ul>\
