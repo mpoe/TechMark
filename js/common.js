@@ -16,7 +16,6 @@ function fnGetUrlParameter(sParam) {
 };
 
 function fnAddNavigation(){
-
 //Prepend the header navigation (1st item in body)
 
 $("header").prepend('<nav class="navigation">\
