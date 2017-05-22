@@ -904,6 +904,10 @@ section.admSecHalf {
     margin: 2em 0;
   }
 
+  #contactInfo {
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 1230px) and (min-width: 768px)  {
@@ -920,5 +924,20 @@ section.admSecHalf {
   /* mobile specific */
   .navigationSearch {
     margin: 2em 0;
+  }
+  #wrapper {
+    width: 80%;
+  }
+  #contactInfo {
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (max-width: 1441px) and (min-width: 1231px) {
+  /*min greater than or equal to - Max less than or equal to*/
+  #wrapper {
+    width: 80%;
   }
 }
