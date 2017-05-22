@@ -577,7 +577,11 @@ time.icon {
     font-size: 2em; }
 
 #partners img {
-  width: 5em; }
+  width: 5em;
+  transition: color 1s; }
+
+.partner:hover {
+  color: #015F0B; }
 
 /* This is used for deleting events & partners based on the ID, and is not shown to the user */
 .eventID, .partnerID {
