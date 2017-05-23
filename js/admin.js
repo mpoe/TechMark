@@ -12,9 +12,9 @@ function fnCheckLogin() {
 function fnGetAllEvents(){
         var sEvent = '<div class="row">\
                              <time datetime="{{eventdatecalender}}" class="icon">\
-                             <strong>September</strong>\
-                             <span>20</span>\
-                             <em>Saturday</em>\
+                             <strong>{{eventMonth}}</strong>\
+                             <span>{{eventDay}}</span>\
+                             <em>{{eventDayname}}</em>\
                              </time>\
                              <span class="eventID">{{eventid}}</span>\
                              <span>{{eventtitle}}</span>\
@@ -27,12 +27,22 @@ function fnGetAllEvents(){
                </div>';
 
     var sURL = "api/api-get-all-events.php";
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     $.getJSON(sURL, function(jData){
+
+
+
+
+
 
         $("#events").empty(); //clear before appending.
         for(var i = 0; i < jData.length; i++){
             var sEventTemplate = sEvent;
+            sEventTemplate = sEventTemplate.replace( "{{eventMonth}}", monthNames[new Date(jData[i].sDate).getMonth()]);
+            sEventTemplate = sEventTemplate.replace( "{{eventDay}}", new Date(jData[i].sDate).getUTCDate());
+            sEventTemplate = sEventTemplate.replace( "{{eventDayname}}", dayNames[new Date(jData[i].sDate).getDay()]);
             sEventTemplate = sEventTemplate.replace( "{{eventdatecalender}}", jData[i].sDate);
             sEventTemplate = sEventTemplate.replace( "{{eventid}}", jData[i].sID);
             sEventTemplate = sEventTemplate.replace( "{{eventtitle}}", jData[i].sTitle);
