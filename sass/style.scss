@@ -557,6 +557,7 @@ footer {
   flex:1;
   img {
     width: 100%;
+    max-height:14em;
   }
 }
 
@@ -929,6 +930,10 @@ section.admSecHalf {
 .searchForm {
   display: flex;
   align-items: center;
+}
+.event-date {
+  display: flex;
+  justify-content: center;
 }
 
 .events a.box {
