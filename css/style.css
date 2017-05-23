@@ -690,7 +690,7 @@ time.icon {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #CC0000;
   text-decoration: none;
   cursor: pointer; }
 
