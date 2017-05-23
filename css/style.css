@@ -451,7 +451,8 @@ footer {
   justify-content: center;
   flex: 1; }
   .column-half img {
-    width: 100%; }
+    width: 100%;
+    max-height: 14em; }
 
 .space-under {
   margin-bottom: 30px; }
@@ -556,6 +557,13 @@ footer {
     /*targets active tab */
     background: #028910;
     color: white; }
+
+.modal-body input {
+  padding: 1em;
+  width: 100%; }
+
+.modelform div {
+  margin-top: 1em; }
 
 form#frm-create-user {
   display: flex;
@@ -683,7 +691,7 @@ time.icon {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #CC0000;
   text-decoration: none;
   cursor: pointer; }
 
@@ -761,6 +769,10 @@ section.admSecHalf {
 .searchForm {
   display: flex;
   align-items: center; }
+
+.event-date {
+  display: flex;
+  justify-content: center; }
 
 .events a.box {
   color: black;
