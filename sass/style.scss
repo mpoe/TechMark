@@ -44,7 +44,7 @@ header {
 
 #wrapper {
   display: flex;
-  width: 50%;
+  width: 80%;
   justify-content: center;
 }
 
@@ -53,6 +53,7 @@ header {
   z-index: 1000;
   background: #fff;
   padding: 1em 0;
+  width:100%;
   h1 {
     display: flex;
     text-align: center;
@@ -112,58 +113,53 @@ button:hover, input[type=submit]:hover {
   flex-direction: column;
 }
 
-.box {
-  height: 20em;
-  width: 20em;
-  margin: .5em 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.box-wrapper {
+  overflow: hidden;
+  margin: 10px;
 }
 
-.boxContentWrapper{
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
+.box {
+  float: left;
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+}
+
+.boxContentWrapper {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  overflow: hidden;
   display: flex;
+  flex-direction: column;
 }
 
 .fpBoxTop {
-    display: flex;
-    flex: 1;
-}
-
-.eventimg {
-    display: flex;
-    flex: 1;
-    max-width:100%
-}
-
-.price {
-    background-color: rgba(255,255,255,.92);
-    font-size: 0.75em;
-    line-height: 1.2em;
-    color: #282C35;
-    padding: 0.2em 0.625em;
-    position: absolute;
-    z-index: 1;
-    margin-top: 0.6em;
-    margin-left: 22.6em;
-    text-transform: uppercase;
-}
-
-.events .box {
-  cursor: pointer;
+  display: flex;
+  flex: 2;
 }
 
 .fpBoxContent {
-    display: flex;
-    background: white;
-    flex: 1;
-    display: inline-block;
-    padding: 0.313em 0.938em;
-    line-height: 180%;
+  display: flex;
+  flex-direction: column;
 }
+
+.eventimg {
+    width:100%;
+    height:100%;
+}
+
+.price {
+    background-color: rgba(255, 255, 255, 0.92);
+    font-size: 0.75em;
+    color: #282C35;
+    padding: 0.2em 0.625em;
+    position: absolute;
+    right: 0;
+}
+
 
 .fpLocation {
     font-size: small;
@@ -940,13 +936,21 @@ section.admSecHalf {
 
 /* Mobiles up to 426 */
 @media only screen and (max-width: 769px) {
-  #contentContainer {
-    width: 100vw;
+
+
+  .box { /*event boxes*/
+    width: 100%;
+    padding-bottom: 100%;
+    margin:1em 0;
   }
 
   .row {
     flex-direction: column;
     align-items: center;
+  }
+
+  h3 { /*makes it smaller*/
+    font-size: 1em;
   }
 
   input.textField {
@@ -1089,6 +1093,10 @@ section.admSecHalf {
   #contactInfo {
     width: 100%;
   }
+  .box {
+     width: 33.3%;
+     padding-bottom: 33.3%;
+   }
 
 
 }
@@ -1097,5 +1105,9 @@ section.admSecHalf {
   /*min greater than or equal to - Max less than or equal to*/
   #wrapper {
     width: 80%;
+  }
+  .box {
+    width: 25%;
+    padding-bottom: 25%;
   }
 }
