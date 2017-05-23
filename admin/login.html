@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Techmark Admin</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- The Modal -->
+  <div id="myModal" class="modal" style="display: none">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+
+      </div>
+      <div class="modal-body">
+
+      </div>
+    </div>
+  </div>
+
+<div id="adminHeader">
+  <div id="adminlogo"><img src="../img/techmarkLogoNoText.svg" alt="techmark Logo">
+  <h1>Welcome Admin</h1>
+  </div>
+</div>
+
+<div id="adminPage">
+    <div class="admMain">
+        <!-- The tabs -->
+        <input id="tab5" type="radio" checked name="tabs">
+        <label for="tab5">Login</label>
+
+        <!-- Tab content -->
+        <div class="admContent">
+          <div id="AddUser">
+            <div class="row">
+              <section>
+    						<form id="frm-create-user" enctype="multipart/form-data">
+    							<input type="input" name="username" placeholder="username">
+    							<input type="input" name="password" placeholder="password">
+    							<button id="btn-login-user" type="submit">Sign in</button>
+    						</form>
+              </section>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../js/login.js"></script>
+
+</body>
+</html>
