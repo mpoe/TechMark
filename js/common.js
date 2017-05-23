@@ -176,11 +176,13 @@ function fnSearchEvents(sWord) {
     $('#search-results').append(sAppend);
   });
 }
+var globalEvent = "";
 function fnGetEvent(eventID) {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   $.getJSON('data/events.txt', function(oData) {
     var oEvent = oData.find(function(e) { return e.sID == eventID });
+    globalEvent = oEvent;
     $('#title').html(oEvent.sTitle);
     $('#month').html(monthNames[new Date(oEvent.sDate).getMonth()]);
     $('#day').html(new Date(oEvent.sDate).getUTCDate());
@@ -233,16 +235,26 @@ $(".searchTerm").keyup(function(event){
     fnSearchEvents($('.searchTerm').val());
 });
 
+$(document).on("click", "#add-to-calendar", function(){
+  console.log(globalEvent);
+  window.location.href = "http://www.google.com/calendar/event?action=TEMPLATE&text=" +globalEvent.sTitle+ "&dates=" +globalEvent.sDate+ "/" +globalEvent.sDate+ "&details=" +globalEvent.sDescription+ "&location=" +globalEvent.sLocation+ "&trp=false&sprop=&sprop=name:";
+});
+
 $(document).on("click", "#btnFindMoreEvents", function(){
   window.location.href = "searchResults.html";
 });
 
-$(document).on("click", "#EventSocialMedia button", function(){
-  alert("The Event has now been added to your calendar.");
-});
-
 $(document).on("click", "#EventregisterButton button", function(){
   //Show Modal
+  $('#event-title').html($('#title').html());
+  $("#registerEvent").css("display", "block").css('z-index', '99999');
+});
+$(document).on("click", ".close", function(){
+  $("#registerEvent").css('display', 'none');
+});
+$(document).on("click", ".btnRegisterForEvent", function(){
+  $("#registerEvent").css('display', 'none');
+  alert("You're now attending the Event!");
 });
 
 /*Responsive menu toggling */
