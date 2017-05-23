@@ -1,7 +1,9 @@
 <head>
 	<title>Edit Partners</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/style.css">
+	<!-- build:css ../css/combined.css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- endbuild -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -46,8 +48,10 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../js/login.js"></script>
-<script src="../js/common.js"></script>
+<!-- build:js ../js/admin-combined.js -->
+    <script src="../js/login.js"></script>
+    <script src="../js/admin.js"></script>
+<!-- endbuild -->
 
 <script>
 var sIDToEdit = getUrlParameter("id");

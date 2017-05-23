@@ -672,6 +672,7 @@ time.icon {
   to {
     top: 0;
     opacity: 1; } }
+
 @keyframes animatetop {
   from {
     top: -300px;
@@ -679,6 +680,7 @@ time.icon {
   to {
     top: 0;
     opacity: 1; } }
+
 /* The Close Button */
 .close {
   color: white;
@@ -745,10 +747,12 @@ section.admSecHalf {
   width: 100%;
   padding: 1em;
   margin: 1em 0; }
+
 #AddUser input {
   width: 50%;
   padding: 1em;
   margin: 1em 0; }
+
 #AddUser button {
   margin: 1em;
   width: 50%; }
@@ -804,71 +808,53 @@ input.searchBtn {
     width: 100%;
     padding-bottom: 100%;
     margin: 1em 0; }
-
   .wrapperNonBoxPages {
     width: 90%; }
-
   .row {
     flex-direction: column;
     align-items: center; }
-
   h3 {
     /*makes it smaller*/
     font-size: 1em; }
-
   input.textField {
     width: 100%;
     margin: 1em 0; }
-
   #contactForm textarea {
     margin: 1em 0; }
-
   /*About specific*/
   .column-half img {
     width: 100%; }
-
   .innerRow {
     flex-direction: column; }
     .innerRow p {
       padding: 0;
       margin: 1em 0; }
-
   .logo {
     /*slightly smaller for mobiles */
     width: 13em;
     margin-left: .3em; }
-
   /*partners*/
   .partnerBox {
     flex-direction: column; }
-
   .leftpanel {
     width: 100%; }
-
   .rpButton {
     width: 100%;
     margin-top: 2em; }
-
   #iconRow {
     flex-wrap: wrap; }
-
   /*event specific */
   .event-date {
     width: 5.5em; }
-
   .column-half {
     align-items: center; }
-
   #EventregisterButton {
     margin: 2em; }
-
   #EventSocialMedia {
     flex-wrap: wrap;
     justify-content: center; }
-
   #EventSocialMedia i {
     margin: 0.7em; }
-
   .footerLevel1 {
     width: 80%; }
     .footerLevel1 button {
@@ -876,31 +862,23 @@ input.searchBtn {
     .footerLevel1 input {
       padding: 1em;
       width: 100%; }
-
   .centerfooter, .rightfooter {
     margin-top: 1em; }
-
   /*MENU*/
   .navitems {
     display: none; }
-
   .menu-btn {
     display: block; }
-
   /* mobile specific */
   .navigationSearch {
     margin: 2em 0; }
-
   #contactInfo {
     width: 100%; }
-
   .btnMenuSearch {
     position: inherit; }
-
   .navigationSearch {
     margin: 2em 0 0 0;
     width: 100%; }
-
   .menuSearch {
     flex-direction: column; }
     .menuSearch button {
@@ -908,41 +886,33 @@ input.searchBtn {
       width: 100%;
       margin-left: 0;
       margin-top: 0; } }
+
 @media only screen and (max-width: 1230px) and (min-width: 768px) {
   /*min greater than or equal to - Max less than or equal to*/
   .wrapperNonBoxPages {
     width: 60%; }
-
   /*MENU*/
   .navitems {
     display: none; }
-
   .menu-btn {
     display: block; }
-
   /* mobile specific */
   .navigationSearch {
     margin: 2em 0; }
-
   #wrapper {
     width: 80%; }
-
   #contactInfo {
     width: 100%; }
-
   .box {
     width: 33.3%;
     padding-bottom: 33.3%; } }
+
 @media only screen and (max-width: 1441px) and (min-width: 1231px) {
   /*min greater than or equal to - Max less than or equal to*/
   #wrapper {
     width: 80%; }
-
   .box {
     width: 25%;
     padding-bottom: 25%; }
-
   .wrapperNonBoxPages {
     width: 60%; } }
-
-/*# sourceMappingURL=style.css.map */
