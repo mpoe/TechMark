@@ -595,12 +595,15 @@ time.icon {
   align-items: center;
   background: #fff;
   box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
-  text-align: center; }
+  text-align: center;
+  width: 6.5em;
+  padding-bottom: .3em; }
   time.icon strong {
     background: #028910;
     border-radius: .6em .6em 0 0;
     padding: .3em 1em;
-    color: white; }
+    color: white;
+    width: 100%; }
   time.icon span {
     font-size: 2em; }
 
