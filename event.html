@@ -51,7 +51,7 @@
           </div>
 
           <div id="EventSocialMedia">
-                <button>Add to Calendar</button>
+                <button id="add-to-calendar">Add to Calendar</button>
                 <i class="fa fa-facebook" aria-hidden="true"></i>
                 <i class="fa fa-twitter" aria-hidden="true"></i>
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -66,6 +66,24 @@
 
 		</div>
 	</div> <!-- inner wrapper -->
+</div>
+
+<!-- The Modal -->
+<div id="registerEvent" class="modal" style="display: none">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span class="close">&times;</span>
+			<h2 id="event-title"></h2>
+		</div>
+		<div class="modal-body">
+			<form method="POST" id="frm-edit-event" enctype="multipart/form-data">
+         <div>Name:<br><input type="text" name="name"></div>
+         <div>E-mail: <br><input type="text" name="email"></div>
+         <div>Phonenumber: <br><input type="text" name="phonenumber"></div>
+     </form>
+     <br><br><button type="button" class="btnRegisterForEvent">Register for event</button><br>
+		</div>
+	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

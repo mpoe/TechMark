@@ -20,7 +20,7 @@ function fnAddNavigation(){
 
 $("header").prepend('<nav class="navigation">\
     <div class="logolinkcontainer">\
-        <a href="index.html"><img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></a>\
+        <a href="index.html"><img src="./img/techmarkLogo.svg" alt="Techmark logo" class="logo"></a>\
       </div>\
     </div>\
     <div class="navitems">\
@@ -72,7 +72,7 @@ $("body").append(
       </div>\
       <div class="row footerLevel2">\
         <div class="leftfooter">\
-          <img src="./img/techmarkWhite.png" alt="Techmark logo" class="footerlogo">\
+          <img src="./img/techmarkLogo.svg" alt="Techmark logo" class="logo">\
         </div>\
         <div class="centerfooter">\
           <div >\
@@ -96,6 +96,28 @@ $("body").append(
     <div id="footerUnder"><p>Copyright TechMark A/S - All rights reserved</p></div>\
   </footer>');
 }
+function formatDate(date) {
+  var monthNames = [
+    "JAN", "FEB", "MAR",
+    "APR", "MAY", "JUN", "JUL",
+    "AUG", "SEP", "OCT",
+    "NOV", "DEC"
+  ];
+  var dayNames = [
+    "SUN", "MON", "TUE",
+    "WED", "THU", "FRI", "SAT"
+  ];
+
+  var day = date.getDate();
+  var ampm = (hours >= 12) ? "PM" : "AM";
+  var hours = (date.getHours()<10?'0':'') + date.getHours();
+  var minutes = (date.getMinutes()<10?'0':'') + date.getMinutes();
+  var dayIndex = date.getDay();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+
+  return dayNames[dayIndex] + ' ' + monthNames[monthIndex] + ' ' + day+ ' ' +hours+ ':' +minutes+ ' ' +ampm;
+}
 function fnSearchEvents(sWord) {
   var date = new Date();
   var day = date.getDate();
@@ -114,16 +136,36 @@ function fnSearchEvents(sWord) {
       if(typeof sWord !== "undefined" && sWord != "" && !oEvent.sTitle.includes(sWord))
         return true;
 
-      if($('#location').val() != "" && !oEvent.sLocation.includes($('#location').val()))
+      if(typeof $('#location').val() !== "undefined" && $('#location').val() != "" && !oEvent.sLocation.includes($('#location').val()))
         return true;
 
-      if($('#tags').val() != "" && !oEvent.sTag.includes($('#tags').val()))
+      if(typeof $('#tags').val() !== "undefined" && $('#tags').val() != "" && !oEvent.sTag.includes($('#tags').val()))
         return true;
 
-      if($('#date').val() != "" && oEvent.sDate != $('#date').val())
+      if(typeof $('#date').val() !== "undefined" && $('#date').val() != "" && oEvent.sDate != $('#date').val())
         return true;
 
-      sAppend += '<a href="event.html?id=' +oEvent.sID+ '" class="box">' +oEvent.sTitle+ '</a>';
+      sAppend +=
+        '<div data-id="' +oEvent.sID+ '" class="event-box box">\
+          <div class="boxContentWrapper">\
+            <div class="fpBoxTop">\
+              <img class="eventimg" src="img/events/' +oEvent.sImage+ '" alt="' +oEvent.sTitle+ '">\
+              <div class="price">' +oEvent.sPrice+ '</div>\
+            </div>\
+            <div class="fpBoxContent">\
+              <div class="fpTimeDate">\
+                <p>' +formatDate(new Date(oEvent.sDate))+ '</p>\
+              </div>\
+              <div class="fpEventTitle">\
+                <h3>' +oEvent.sTitle+ '</h3>\
+              </div>\
+              <div class="fpLocation">\
+                <div class="fploc"><p>' +oEvent.sLocation+ '</p></div>\
+                <div class="fpmap"><i class="fa fa-map-marker" title="See location on Google maps" aria-hidden="true"></i></div>\
+              </div>\
+            </div>\
+          </div>\
+        </div>';
 
       if(iCount == 2 || index == oData.length-1) {
         sAppend += '</div><div class="row events">';
@@ -134,11 +176,13 @@ function fnSearchEvents(sWord) {
     $('#search-results').append(sAppend);
   });
 }
+var globalEvent = "";
 function fnGetEvent(eventID) {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   $.getJSON('data/events.txt', function(oData) {
     var oEvent = oData.find(function(e) { return e.sID == eventID });
+    globalEvent = oEvent;
     $('#title').html(oEvent.sTitle);
     $('#month').html(monthNames[new Date(oEvent.sDate).getMonth()]);
     $('#day').html(new Date(oEvent.sDate).getUTCDate());
@@ -152,7 +196,12 @@ function isValidEmail(sEmail) {
   return pattern.test(sEmail);
 }
 
-if(window.location.href.indexOf("searchResults.html") > -1)
+window.onclick = function(event) {
+  if (event.target == document.getElementById('registerEvent'))
+    document.getElementById('registerEvent').style.display = "none";
+}
+
+if(window.location.href.indexOf("html") === -1 || window.location.href.indexOf("searchResults.html") > -1 || window.location.href.indexOf("index.html") > -1)
   fnSearchEvents(fnGetUrlParameter('search'));
 
 if(window.location.href.indexOf("event.html") > -1)
@@ -168,6 +217,10 @@ function fnSearchOnEnter() {
 
 $(document).on("click", ".btnMenuSearch", function(e){
   window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
+});
+
+$(document).on("click", ".event-box", function(e){
+  window.location = 'event.html?id=' +$(this).attr('data-id');
 });
 
 $(document).on("click", ".searchBtn", function(e){
@@ -187,16 +240,26 @@ $(".searchTerm").keyup(function(event){
     fnSearchEvents($('.searchTerm').val());
 });
 
+$(document).on("click", "#add-to-calendar", function(){
+  console.log(globalEvent);
+  window.location.href = "http://www.google.com/calendar/event?action=TEMPLATE&text=" +globalEvent.sTitle+ "&dates=" +globalEvent.sDate+ "/" +globalEvent.sDate+ "&details=" +globalEvent.sDescription+ "&location=" +globalEvent.sLocation+ "&trp=false&sprop=&sprop=name:";
+});
+
 $(document).on("click", "#btnFindMoreEvents", function(){
   window.location.href = "searchResults.html";
 });
 
-$(document).on("click", "#EventSocialMedia button", function(){
-  alert("The Event has now been added to your calendar.");
-});
-
 $(document).on("click", "#EventregisterButton button", function(){
   //Show Modal
+  $('#event-title').html($('#title').html());
+  $("#registerEvent").css("display", "block").css('z-index', '99999');
+});
+$(document).on("click", ".close", function(){
+  $("#registerEvent").css('display', 'none');
+});
+$(document).on("click", ".btnRegisterForEvent", function(){
+  $("#registerEvent").css('display', 'none');
+  alert("You're now attending the Event!");
 });
 
 /*Responsive menu toggling */
