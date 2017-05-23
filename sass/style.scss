@@ -591,8 +591,7 @@ footer {
 }
 
 #EventregisterButton {
-  @include center-children;
-  flex: 1;
+  display: flex;
   width: 100%;
 }
 
