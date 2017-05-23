@@ -451,8 +451,7 @@ footer {
   flex-direction: column;
   justify-content: center; }
   .column-half img {
-    width: 350px;
-    margin-top: .2em; }
+    width: 100%; }
 
 .space-under {
   margin-bottom: 30px; }
@@ -778,6 +777,9 @@ input.searchBtn {
     width: 100%;
     padding-bottom: 100%;
     margin: 1em 0; }
+
+  .wrapperNonBoxPages {
+    width: 90%; }
 
   .row {
     flex-direction: column;

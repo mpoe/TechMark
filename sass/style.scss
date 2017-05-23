@@ -556,8 +556,7 @@ footer {
   @include flex-col;
   justify-content: center;
   img {
-    width: 350px;
-    margin-top: .2em;
+    width: 100%;
   }
 }
 
@@ -942,6 +941,10 @@ section.admSecHalf {
     width: 100%;
     padding-bottom: 100%;
     margin:1em 0;
+  }
+
+  .wrapperNonBoxPages {
+    width: 90%;
   }
 
   .row {
