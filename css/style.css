@@ -134,7 +134,8 @@ button:hover, input[type=submit]:hover {
   font-size: small;
   justify-content: space-between;
   display: flex;
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  padding-bottom: 5px; }
 
 i.fa.fa-map-marker {
   padding: 0.3em;
