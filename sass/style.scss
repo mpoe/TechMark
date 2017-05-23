@@ -556,6 +556,7 @@ footer {
 .column-half {
   @include flex-col;
   justify-content: center;
+  flex:1;
   img {
     width: 100%;
   }
@@ -1092,6 +1093,10 @@ section.admSecHalf {
 @media only screen and (max-width: 1230px) and (min-width: 768px)  {
   /*min greater than or equal to - Max less than or equal to*/
 
+  .wrapperNonBoxPages {
+    width: 60%;
+  }
+
   /*MENU*/
   .navitems {
     display: none;
@@ -1114,8 +1119,6 @@ section.admSecHalf {
      width: 33.3%;
      padding-bottom: 33.3%;
    }
-
-
 }
 
 @media only screen and (max-width: 1441px) and (min-width: 1231px) {
@@ -1126,5 +1129,8 @@ section.admSecHalf {
   .box {
     width: 25%;
     padding-bottom: 25%;
+  }
+  .wrapperNonBoxPages {
+    width: 60%;
   }
 }

@@ -450,7 +450,8 @@ footer {
 .column-half {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  flex: 1; }
   .column-half img {
     width: 100%; }
 
@@ -895,6 +896,9 @@ input.searchBtn {
       margin-top: 0; } }
 @media only screen and (max-width: 1230px) and (min-width: 768px) {
   /*min greater than or equal to - Max less than or equal to*/
+  .wrapperNonBoxPages {
+    width: 60%; }
+
   /*MENU*/
   .navitems {
     display: none; }
@@ -922,6 +926,9 @@ input.searchBtn {
 
   .box {
     width: 25%;
-    padding-bottom: 25%; } }
+    padding-bottom: 25%; }
+
+  .wrapperNonBoxPages {
+    width: 60%; } }
 
 /*# sourceMappingURL=style.css.map */
