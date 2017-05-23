@@ -557,6 +557,13 @@ footer {
     background: #028910;
     color: white; }
 
+.modal-body input {
+  padding: 1em;
+  width: 100%; }
+
+.modelform div {
+  margin-top: 1em; }
+
 form#frm-create-user {
   display: flex;
   flex-direction: column;

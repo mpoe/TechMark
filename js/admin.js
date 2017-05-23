@@ -207,13 +207,15 @@ $(document).on("click", ".btnEditEvent", function(){
     var sEventTitle = '<h2>Editing Event: #{{eventid}}</h2>';
 
     var sEvent = '<form method="POST" id="frm-edit-event" enctype="multipart/form-data">\
+                                <div class="modelform">\
                                  <div class="eventID"> ID:<br><input type="text" name="id" value="{{eventid}}"></div>\
-                                 <div>Title:<br><input type="text" name="title" value="{{eventtitle}}"></div>\
-                                 <div>Tags: <br><input type="text" name="tag" value="{{eventtags}}"></div>\
-                                 <div>Description: <br><input type="text" name="description" value="{{eventdesc}}"></div>\
-                                 <div>Location: <br><input type="text" name="location" value="{{eventlocation}}"></div>\
-                                 <div>Date: <br><input type="date" name="date" value="{{eventdate}}"></div>\
-                                 <div>Price: <br><input type="text" name="price" value="{{eventprice}}"></div>\
+                                 <div><label>Title:</label><br><input type="text" name="title" value="{{eventtitle}}"></div>\
+                                 <div><label>Tags:</label><br><input type="text" name="tag" value="{{eventtags}}"></div>\
+                                 <div><label>Description:</label><br><input type="text" name="description" value="{{eventdesc}}"></div>\
+                                 <div><label>Location:</label><br><input type="text" name="location" value="{{eventlocation}}"></div>\
+                                 <div><label>Date:</label><br><input type="date" name="date" value="{{eventdate}}"></div>\
+                                 <div><label>Price:</label><br><input type="text" name="price" value="{{eventprice}}"></div>\
+                                 </div>\
                              </form>\
                              <form method="POST" id="frm-edit-event-image" enctype="multipart/form-data">\
                                 <div class="eventID2">ID:<br><input type="text" name="id" value="{{eventid}}"></div>\
