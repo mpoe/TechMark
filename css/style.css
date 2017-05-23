@@ -830,6 +830,9 @@ input.searchBtn {
   #EventSocialMedia i {
     margin: 0.7em; }
 
+  #EventSocialMedia i:hover {
+    color: #028910; }
+
   .footerLevel1 {
     width: 80%; }
     .footerLevel1 button {

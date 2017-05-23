@@ -1009,6 +1009,11 @@ section.admSecHalf {
   #EventSocialMedia i {
     margin: 0.7em;
   }
+
+  #EventSocialMedia i:hover {
+    color:$button;
+  }
+
   .footerLevel1 {
     width:80%;
     button {
