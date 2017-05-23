@@ -42,10 +42,14 @@ header {
   flex-direction: column;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   width: 80%;
   justify-content: center;
+}
+
+.wrapperNonBoxPages {
+  width: 50%;
 }
 
 #innerWrapper {
