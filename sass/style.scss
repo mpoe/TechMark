@@ -149,6 +149,11 @@ button:hover, input[type=submit]:hover {
     z-index: 1;
     margin-top: 0.6em;
     margin-left: 22.6em;
+    text-transform: uppercase;
+}
+
+.events .box {
+  cursor: pointer;
 }
 
 .fpBoxContent {
@@ -739,7 +744,7 @@ footer {
 }
 
   .eventID2, .partnerID2 { /* This is used to identify which event/partner ID the edit image belongs to, and is not shown to the user */
-    display: none; 
+    display: none;
   }
 
 

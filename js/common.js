@@ -96,6 +96,28 @@ $("body").append(
     <div id="footerUnder"><p>Copyright TechMark A/S - All rights reserved</p></div>\
   </footer>');
 }
+function formatDate(date) {
+  var monthNames = [
+    "JAN", "FEB", "MAR",
+    "APR", "MAY", "JUN", "JUL",
+    "AUG", "SEP", "OCT",
+    "NOV", "DEC"
+  ];
+  var dayNames = [
+    "SUN", "MON", "TUE",
+    "WED", "THU", "FRI", "SAT"
+  ];
+
+  var day = date.getDate();
+  var ampm = (hours >= 12) ? "PM" : "AM";
+  var hours = (date.getHours()<10?'0':'') + date.getHours();
+  var minutes = (date.getMinutes()<10?'0':'') + date.getMinutes();
+  var dayIndex = date.getDay();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+
+  return dayNames[dayIndex] + ' ' + monthNames[monthIndex] + ' ' + day+ ' ' +hours+ ':' +minutes+ ' ' +ampm;
+}
 function fnSearchEvents(sWord) {
   var date = new Date();
   var day = date.getDate();
@@ -123,7 +145,27 @@ function fnSearchEvents(sWord) {
       if($('#date').val() != "" && oEvent.sDate != $('#date').val())
         return true;
 
-      sAppend += '<a href="event.html?id=' +oEvent.sID+ '" class="box">' +oEvent.sTitle+ '</a>';
+      sAppend +=
+        '<div data-id="' +oEvent.sID+ '" class="event-box box">\
+          <div class="boxContentWrapper">\
+            <div class="fpBoxTop">\
+              <img class="eventimg" src="img/events/' +oEvent.sImage+ '" alt="' +oEvent.sTitle+ '">\
+              <div class="price">' +oEvent.sPrice+ '</div>\
+            </div>\
+            <div class="fpBoxContent">\
+              <div class="fpTimeDate">\
+                <p>' +formatDate(new Date(oEvent.sDate))+ '</p>\
+              </div>\
+              <div class="fpEventTitle">\
+                <h3>' +oEvent.sTitle+ '</h3>\
+              </div>\
+              <div class="fpLocation">\
+                <div class="fploc"><p>' +oEvent.sLocation+ '</p></div>\
+                <div class="fpmap"><i class="fa fa-map-marker" title="See location on Google maps" aria-hidden="true"></i></div>\
+              </div>\
+            </div>\
+          </div>\
+        </div>';
 
       if(iCount == 2 || index == oData.length-1) {
         sAppend += '</div><div class="row events">';
@@ -168,6 +210,10 @@ function fnSearchOnEnter() {
 
 $(document).on("click", ".btnMenuSearch", function(e){
   window.location.href = "searchResults.html?search=" +$('.navigationSearch').val();
+});
+
+$(document).on("click", ".event-box", function(e){
+  window.location = 'event.html?id=' +$(this).attr('data-id');
 });
 
 $(document).on("click", ".searchBtn", function(e){

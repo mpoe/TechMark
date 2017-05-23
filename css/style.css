@@ -116,7 +116,13 @@ button:hover, input[type=submit]:hover {
   position: absolute;
   z-index: 1;
   margin-top: 0.6em;
-  margin-left: 22.6em; }
+  margin-left: 22.6em;
+  text-transform: uppercase;
+}
+
+.events .box {
+  cursor: pointer;
+}
 
 .fpBoxContent {
   display: flex;
