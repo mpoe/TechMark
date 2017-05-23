@@ -540,9 +540,6 @@ footer {
   width: 14em;
 }
 
-
-
-
 /* ------------------------   ABOUT US PAGE -------------------------------------*/
 
 #aboutUsHeader {
@@ -1037,6 +1034,26 @@ section.admSecHalf {
   #contactInfo {
     width: 100%;
   }
+
+  .btnMenuSearch {
+    position: inherit;
+  }
+
+  .navigationSearch {
+    margin: 2em 0 0 0;
+    width: 100%;
+  }
+
+  .menuSearch {
+    flex-direction:column;
+    button {
+      padding: .9em;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+
 
 }
 
