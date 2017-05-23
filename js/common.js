@@ -196,7 +196,12 @@ function isValidEmail(sEmail) {
   return pattern.test(sEmail);
 }
 
-if(window.location.href.indexOf("searchResults.html") > -1 || window.location.href.indexOf("index.html") > -1)
+window.onclick = function(event) {
+  if (event.target == document.getElementById('registerEvent'))
+    document.getElementById('registerEvent').style.display = "none";
+}
+
+if(window.location.href.indexOf("html") === -1 || window.location.href.indexOf("searchResults.html") > -1 || window.location.href.indexOf("index.html") > -1)
   fnSearchEvents(fnGetUrlParameter('search'));
 
 if(window.location.href.indexOf("event.html") > -1)
