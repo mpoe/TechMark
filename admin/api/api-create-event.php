@@ -8,7 +8,8 @@
 	$sEventPrice = $_POST['price'];
 
 						//Name of field   //tmp name , //to directory 			// 'name' the users filename 
-	move_uploaded_file ($_FILES['image']['tmp_name'] , "../../img/events/" . $_FILES['image']['name']);
+		move_uploaded_file ($_FILES['image']['tmp_name'] , "../../img/events/" . $_FILES['image']['name']);
+
 
 	// file to get contents to compare with
 	$sFileName = "../../data/events.txt"; // This is the file+path to it
@@ -23,7 +24,7 @@
 	}
 	//Create the new object
 	$jEvent = json_decode('{}'); // to make the json object
-	$jEvent->sID = (string)(count($ajEvents)+1);
+	$jEvent->sID = (string)($ajEvents[count($ajEvents)-1]->sID+1);
 	$jEvent->sTitle = $sEventTitle;
 	$jEvent->sTag = $sEventTag;
 	$jEvent->sDescription = $sEventDescription;

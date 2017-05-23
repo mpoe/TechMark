@@ -20,8 +20,10 @@
 		// check if the ids match
 		if( $eventID == $ajEvents[$i]->sID){
 			// update the Event based on the position in the array
+			if(!empty($_FILES['image']['name'])){
 			$ajEvents[$i]->sImage = $_FILES['image']['name'];
 			break;
+			}
 		}
 	}
 

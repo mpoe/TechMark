@@ -21,7 +21,7 @@
 	}
 	//Create the new object
 	$jPartner = json_decode('{}'); // to make the json object
-	$jPartner->sID = (string)(count($ajPartners)+1);
+	$jPartner->sID = (string)($ajPartners[count($ajPartners)-1]->sID+1);
 	$jPartner->sPartnerName = $sPartnerName;
 	$jPartner->sPartnerWebsite = $sPartnerWebsite;
 	$jPartner->sPartnerMail = $sPartnerMail;

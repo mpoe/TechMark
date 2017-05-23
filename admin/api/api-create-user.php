@@ -16,7 +16,7 @@
 	}
 	//Create the new object
 	$jUser = json_decode('{}'); // to make the json object
-	$jUser->sID = (string)(count($ajUsers)+1);
+	$jUser->sID = (string)($ajUsers[count($ajUsers)-1]->sID+1);
 	$jUser->sUsername = $sUserName;
 	$jUser->sPassword = $sPassword;
 
