@@ -128,9 +128,7 @@ function fnSearchEvents(sWord) {
   $('.searchTerm').val(sWord);
   $('#search-results').html('');
   $.getJSON('data/events.txt', function(oData) {
-    var sAppend = '<div class="row events">';
-    var iCount = 0;
-    var sExp = "/" +sWord+ "/";
+    var sAppend = '';
 
     $.each(oData, function(index, oEvent) {
       if(typeof sWord !== "undefined" && sWord != "" && !oEvent.sTitle.includes(sWord))
@@ -166,12 +164,6 @@ function fnSearchEvents(sWord) {
             </div>\
           </div>\
         </div>';
-
-      if(iCount == 2 || index == oData.length-1) {
-        sAppend += '</div><div class="row events">';
-        iCount = 0;
-      } else
-        iCount++;
     });
     $('#search-results').append(sAppend);
   });
@@ -241,7 +233,6 @@ $(".searchTerm").keyup(function(event){
 });
 
 $(document).on("click", "#add-to-calendar", function(){
-  console.log(globalEvent);
   window.location.href = "http://www.google.com/calendar/event?action=TEMPLATE&text=" +globalEvent.sTitle+ "&dates=" +globalEvent.sDate+ "/" +globalEvent.sDate+ "&details=" +globalEvent.sDescription+ "&location=" +globalEvent.sLocation+ "&trp=false&sprop=&sprop=name:";
 });
 
