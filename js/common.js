@@ -136,13 +136,13 @@ function fnSearchEvents(sWord) {
       if(typeof sWord !== "undefined" && sWord != "" && !oEvent.sTitle.includes(sWord))
         return true;
 
-      if($('#location').val() != "" && !oEvent.sLocation.includes($('#location').val()))
+      if(typeof $('#location').val() !== "undefined" && $('#location').val() != "" && !oEvent.sLocation.includes($('#location').val()))
         return true;
 
-      if($('#tags').val() != "" && !oEvent.sTag.includes($('#tags').val()))
+      if(typeof $('#tags').val() !== "undefined" && $('#tags').val() != "" && !oEvent.sTag.includes($('#tags').val()))
         return true;
 
-      if($('#date').val() != "" && oEvent.sDate != $('#date').val())
+      if(typeof $('#date').val() !== "undefined" && $('#date').val() != "" && oEvent.sDate != $('#date').val())
         return true;
 
       sAppend +=
@@ -196,7 +196,7 @@ function isValidEmail(sEmail) {
   return pattern.test(sEmail);
 }
 
-if(window.location.href.indexOf("searchResults.html") > -1)
+if(window.location.href.indexOf("searchResults.html") > -1 || window.location.href.indexOf("index.html") > -1)
   fnSearchEvents(fnGetUrlParameter('search'));
 
 if(window.location.href.indexOf("event.html") > -1)
