@@ -3,7 +3,7 @@
         "sID": "1",
         "sTitle": "Artificial Inteligence",
         "sTag": "ai, IT, kea",
-        "sDescription": "Artificial Inteligence is very clever.",
+        "sDescription": "Artificial Inteligence is very clever. We are an integrated tech event organising company in Copenhagen. We specialise in arranging events, conferences, and meetings according to your wishes and needs. Enjoy the benefit of our many years of experience throughout the entire process. Our focus is both on attracting participants to events, as well as on finding partners that are willing to sponsor the events or hold a presentation for an event.",
         "sLocation": "Royal Arena",
         "sDate": "2017-05-28",
         "sPrice": "FREE",

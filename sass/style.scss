@@ -921,6 +921,16 @@ section.admSecHalf {
   background-size:cover;
 }
 
+.eventSpecialWrapper {
+  position: relative;
+}
+
+.event-date {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
 #SearchDateSelector {
   flex: 2;
   justify-content: flex-start;
@@ -931,9 +941,9 @@ section.admSecHalf {
   display: flex;
   align-items: center;
 }
-.event-date {
+
+#eventContent {
   display: flex;
-  justify-content: center;
 }
 
 .events a.box {

@@ -761,6 +761,14 @@ section.admSecHalf {
   background: url(../img/searchResultsbanner.jpg) no-repeat center;
   background-size: cover; }
 
+.eventSpecialWrapper {
+  position: relative; }
+
+.event-date {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
+
 #SearchDateSelector {
   flex: 2;
   justify-content: flex-start;
@@ -770,9 +778,8 @@ section.admSecHalf {
   display: flex;
   align-items: center; }
 
-.event-date {
-  display: flex;
-  justify-content: center; }
+#eventContent {
+  display: flex; }
 
 .events a.box {
   color: black;
