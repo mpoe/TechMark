@@ -494,6 +494,9 @@ footer {
     font-size: 2em;
     margin: 0 .5em; }
 
+#EventSocialMedia i:hover {
+  color: #028910; }
+
 #eventMap iframe#googleMap {
   height: 15em; }
 
@@ -829,9 +832,6 @@ input.searchBtn {
 
   #EventSocialMedia i {
     margin: 0.7em; }
-
-  #EventSocialMedia i:hover {
-    color: #028910; }
 
   .footerLevel1 {
     width: 80%; }

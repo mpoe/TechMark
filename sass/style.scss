@@ -606,6 +606,10 @@ footer {
   }
 }
 
+#EventSocialMedia i:hover {
+  color:$button;
+}
+
 #eventMap iframe#googleMap {
   height: 15em;
 }
@@ -1008,10 +1012,6 @@ section.admSecHalf {
 
   #EventSocialMedia i {
     margin: 0.7em;
-  }
-
-  #EventSocialMedia i:hover {
-    color:$button;
   }
 
   .footerLevel1 {
