@@ -550,10 +550,19 @@ footer {
     text-align: center; }
   .admMain label:hover {
     cursor: pointer;
-    background: #015F0B; }
+    background: #028910;
+    color: white; }
   .admMain input:checked + label {
     /*targets active tab */
-    background: #015F0B; }
+    background: #028910;
+    color: white; }
+
+form#frm-create-user {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center; }
 
 /* uses checkbox to turn them on and off */
 #tab1:checked ~ .admContent #events,
@@ -591,8 +600,7 @@ time.icon {
     background: #028910;
     border-radius: .6em .6em 0 0;
     padding: .3em 1em;
-    color: white;
-    width: 5.5em; }
+    color: white; }
   time.icon span {
     font-size: 2em; }
 

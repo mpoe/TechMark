@@ -675,11 +675,21 @@ footer {
     }
     label:hover {
       cursor: pointer;
-      background: $hoverbutton;
+      background: $button;
+      color: white;
     }
     input:checked + label { /*targets active tab */
-      background: $hoverbutton;
+      background: $button;
+      color: white;
     }
+}
+
+form#frm-create-user {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -726,7 +736,6 @@ footer {
       border-radius: .6em .6em 0 0;
       padding: .3em 1em;
       color: white;
-      width:5.5em;
     }
 
     span {
