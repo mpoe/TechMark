@@ -4,6 +4,17 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans');
 
+@mixin center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction:column;
+}
+
 $button: #028910; //Japanese Laurel: Green
 $titles: #028910; //Japanese Laurel: Green
 
@@ -25,10 +36,8 @@ $bodyfont: 'Droid Sans', sans-serif;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  @include center-children;
+  @include flex-col;
   background: $background;
 }
 
@@ -36,10 +45,9 @@ header {
   width: 100%;
   background: grey;
   height: 25em;
-  display: flex;
   align-items: center;
   color: #ffffff;
-  flex-direction: column;
+  @include flex-col;
 }
 
 .wrapper {
@@ -67,8 +75,7 @@ header {
 }
 
 #contentContainer {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   width:100%;
   padding: 0 1em;
 }
@@ -85,7 +92,7 @@ header {
 button, input[type=submit] { /*this should become a global rule! all buttons should be the same */
   padding: 1em;
   width: 50%;
-  background-color: #028910;
+  background-color: $button;
   color: #fff;
   font-weight: 800;
   border: 0;
@@ -112,9 +119,8 @@ button:hover, input[type=submit]:hover {
 }
 
 #fpWrapperHeader {
-  display: flex;
+  @include flex-col;
   align-items: center;
-  flex-direction: column;
 }
 
 .box-wrapper {
@@ -130,14 +136,13 @@ button:hover, input[type=submit]:hover {
 }
 
 .boxContentWrapper {
+  @include flex-col;
   position: absolute;
   left: 10px;
   right: 10px;
   top: 10px;
   bottom: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .fpBoxTop {
@@ -146,8 +151,7 @@ button:hover, input[type=submit]:hover {
 }
 
 .fpBoxContent {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
 }
 
 .eventimg {
@@ -180,17 +184,17 @@ i.fa.fa-map-marker {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    background: #028910;
+    background: $button;
     color: #fff;
-    border: 1px solid #028910;
+    border: 1px solid $button;
     transition: background-color 2s;
 }
 
 i.fa.fa-map-marker:hover {
   background: #fff;
   cursor: pointer;
-  color: #028910;
-  border: 1px solid #028910;
+  color: $button;
+  border: 1px solid $button;
 }
 #btnFindMoreEvents {
   width: 100%;
@@ -228,7 +232,7 @@ i.fa.fa-map-marker:hover {
     padding: .2em;
   }
   .fa:hover {
-    color: #028910;
+    color: $button;
     cursor: pointer;
   }
 
@@ -240,8 +244,7 @@ i.fa.fa-map-marker:hover {
 
 /*contact form*/
 #contactForm {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   input, textarea {
     padding: 1em;
@@ -292,9 +295,7 @@ input.subject.textField {
 }
 
 .rpButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-children;
 }
 
 .partnerBox {
@@ -378,7 +379,7 @@ nav ul {
   border-bottom: 1px solid #363636;
 }
 .navitems a:hover{
-  color: #028910;
+  color: $button;
   border-bottom: 1px solid #fff;
 }
 
@@ -419,11 +420,9 @@ nav ul {
 }
 
 footer {
+  @include center-children;
   background-color: #363636;
   color:#fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   height: auto;
   width:100%;
@@ -435,8 +434,7 @@ footer {
 }
 
 #footerMain {
-  flex-direction: column;
-  display: flex;
+  @include flex-col;
   margin-top: 18em;
   width: 80%;
   img {
@@ -448,8 +446,7 @@ footer {
 }
 
 .footerLevel1 {
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
   align-items: center;
   width: 50%;
   margin: 0 auto;
@@ -515,12 +512,10 @@ footer {
 
 /*hamburger menu */
 #mobileMenu {
+    @include center-children;
     position: absolute;
     left: 0;
     top: 4.7em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background: #363636;
     width: 100%;
@@ -558,9 +553,8 @@ footer {
 }
 
 .column-half {
-  display: flex;
+  @include flex-col;
   justify-content: center;
-  flex-direction: column;
   img {
     width: 350px;
     margin-top: .2em;
@@ -591,18 +585,14 @@ footer {
 /* ------------------------   Event page specific  ------------------------  */
 
 .socialMedia-calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include center-children;
+  @include flex-col;
   flex: 1;
-  justify-content: center;
 }
 
 #EventregisterButton {
+  @include center-children;
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -618,6 +608,10 @@ footer {
     font-size: 2em;
     margin: 0 .5em;
   }
+}
+
+#EventSocialMedia i:hover {
+  color:$button;
 }
 
 #eventMap iframe#googleMap {
@@ -682,10 +676,10 @@ footer {
     }
     label:hover {
       cursor: pointer;
-      background: #ed5a6a;
+      background: $hoverbutton;
     }
     input:checked + label { /*targets active tab */
-      background: #d3d3d3;
+      background: $hoverbutton;
     }
 }
 
@@ -715,7 +709,7 @@ footer {
 }
 
 .btnDeleteEvent:hover, .btnDeletePartner:hover {
-  background-color: #FF5822;
+  background-color:$hoverbuttonwarning;
 }
 
   /*icon */
@@ -729,7 +723,7 @@ footer {
     text-align: center;
 
     strong {
-      background: #028910;
+      background: $button;
       border-radius: .6em .6em 0 0;
       padding: .3em 1em;
       color: white;
@@ -747,7 +741,7 @@ footer {
 }
 
 .partner:hover {
-  color: #015F0B;
+  color: $hoverbutton;
 }
 
 /* This is used for deleting events & partners based on the ID, and is not shown to the user */
@@ -846,10 +840,8 @@ footer {
   height: 100%;
   width:100%;
   section {
+    @include flex-col;
     flex: 2;
-    background: orange;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     input {
@@ -884,8 +876,7 @@ section.admSecHalf {
 
 #AddUser {
   section {
-    flex-direction: column;
-    display: flex;
+    @include flex-col;
     align-items: center;
     width: 100%;
     padding: 1em;
@@ -907,7 +898,6 @@ section.admSecHalf {
   background: url(../img/searchResultsbanner.jpg) no-repeat center;
   background-size:cover;
 }
-
 
 #SearchDateSelector {
   flex: 2;
@@ -1029,6 +1019,7 @@ section.admSecHalf {
   #EventSocialMedia i {
     margin: 0.7em;
   }
+
   .footerLevel1 {
     width:80%;
     button {
