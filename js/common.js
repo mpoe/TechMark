@@ -20,7 +20,7 @@ function fnAddNavigation(){
 
 $("header").prepend('<nav class="navigation">\
     <div class="logolinkcontainer">\
-        <a href="index.html"><img src="./img/techmarkWhite.png" alt="Techmark logo" class="logo"></a>\
+        <a href="index.html"><img src="./img/techmarkLogo.svg" alt="Techmark logo" class="logo"></a>\
       </div>\
     </div>\
     <div class="navitems">\
@@ -72,7 +72,7 @@ $("body").append(
       </div>\
       <div class="row footerLevel2">\
         <div class="leftfooter">\
-          <img src="./img/techmarkWhite.png" alt="Techmark logo" class="footerlogo">\
+          <img src="./img/techmarkLogo.svg" alt="Techmark logo" class="logo">\
         </div>\
         <div class="centerfooter">\
           <div >\
