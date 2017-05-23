@@ -1,8 +1,14 @@
 //Grab events & partners when page loads.
-
+fnCheckLogin();
 fnGetAllEvents();
 fnGetAllPartners();
 
+function fnCheckLogin() {
+  $.getJSON('api/check-login.php', function(oData) {
+    if(oData.status == "error")
+      window.location = "login.html";
+  });
+}
 function fnGetAllEvents(){
         var sEvent = '<div class="row">\
                              <time datetime="{{eventdatecalender}}" class="icon">\
