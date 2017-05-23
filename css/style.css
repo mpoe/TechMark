@@ -9,8 +9,9 @@
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  display: flex;
   flex-direction: column;
   background: #EEEEEE; }
 
@@ -18,9 +19,9 @@ header {
   width: 100%;
   background: grey;
   height: 25em;
-  display: flex;
   align-items: center;
   color: #ffffff;
+  display: flex;
   flex-direction: column; }
 
 .wrapper {
@@ -85,8 +86,8 @@ button:hover, input[type=submit]:hover {
 
 #fpWrapperHeader {
   display: flex;
-  align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
 .box-wrapper {
   overflow: hidden;
@@ -99,14 +100,14 @@ button:hover, input[type=submit]:hover {
   padding-bottom: 25%; }
 
 .boxContentWrapper {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   left: 10px;
   right: 10px;
   top: 10px;
   bottom: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column; }
+  overflow: hidden; }
 
 .fpBoxTop {
   display: flex;
@@ -327,11 +328,11 @@ nav ul {
   width: 14em; }
 
 footer {
-  background-color: #363636;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #363636;
+  color: #fff;
   flex-direction: column;
   height: auto;
   width: 100%; }
@@ -341,8 +342,8 @@ footer {
     color: black; }
 
 #footerMain {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   margin-top: 18em;
   width: 80%; }
   #footerMain img {
@@ -405,12 +406,12 @@ footer {
 
 /*hamburger menu */
 #mobileMenu {
-  position: absolute;
-  left: 0;
-  top: 4.7em;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4.7em;
   flex-direction: column;
   background: #363636;
   width: 100%;
@@ -442,8 +443,8 @@ footer {
 
 .column-half {
   display: flex;
-  justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center; }
   .column-half img {
     width: 350px;
     margin-top: .2em; }
@@ -469,16 +470,17 @@ footer {
 /* ------------------------   Event page specific  ------------------------  */
 .socialMedia-calendar {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex: 1;
-  justify-content: center; }
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
 
 #EventregisterButton {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
   width: 100%; }
 
 #EventSocialMedia {
@@ -541,10 +543,10 @@ footer {
     text-align: center; }
   .admMain label:hover {
     cursor: pointer;
-    background: #ed5a6a; }
+    background: #015F0B; }
   .admMain input:checked + label {
     /*targets active tab */
-    background: #d3d3d3; }
+    background: #015F0B; }
 
 /* uses checkbox to turn them on and off */
 #tab1:checked ~ .admContent #events,
@@ -684,10 +686,9 @@ time.icon {
   height: 100%;
   width: 100%; }
   .admEdit section {
-    flex: 2;
-    background: orange;
     display: flex;
     flex-direction: column;
+    flex: 2;
     justify-content: flex-start;
     align-items: flex-start; }
     .admEdit section input {
@@ -713,8 +714,8 @@ section.admSecHalf {
   justify-content: center; }
 
 #AddUser section {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 1em;
