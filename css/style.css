@@ -317,9 +317,15 @@ nav ul {
   color: green; }
 
 .navigationSearch {
-  padding: 1em;
+  padding: 1em 0;
   width: 0;
   transition: width 600ms; }
+
+.navigationSearch::placeholder {
+  padding-left: 1em; }
+
+.navigationSearch:-ms-input-placeholder {
+  padding-left: 1em; }
 
 .navigationSearch:active, .navigationSearch:hover, .navigationSearch:focus {
   width: 14em; }
@@ -405,14 +411,15 @@ footer {
 #mobileMenu {
   position: absolute;
   left: 0;
-  top: 4em;
+  top: 4.7em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #363636;
   width: 100%;
-  z-index: 10000; }
+  z-index: 10000;
+  padding-bottom: 1em; }
   #mobileMenu a {
     padding-top: 1em;
     font-size: 1.5em;
@@ -425,7 +432,7 @@ footer {
   .menuSearch button {
     padding: .9em;
     width: 5em;
-    margin-left: 2em;
+    margin-left: 1.9em;
     margin-top: -.1em; }
 
 /*brings out the search when you hover.*/
@@ -783,6 +790,11 @@ input.searchBtn {
       padding: 0;
       margin: 1em 0; }
 
+  .logo {
+    /*slightly smaller for mobiles */
+    width: 13em;
+    margin-left: .3em; }
+
   /*partners*/
   .partnerBox {
     flex-direction: column; }
@@ -837,7 +849,22 @@ input.searchBtn {
     margin: 2em 0; }
 
   #contactInfo {
-    width: 100%; } }
+    width: 100%; }
+
+  .btnMenuSearch {
+    position: inherit; }
+
+  .navigationSearch {
+    margin: 2em 0 0 0;
+    width: 100%; }
+
+  .menuSearch {
+    flex-direction: column; }
+    .menuSearch button {
+      padding: .9em;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0; } }
 @media only screen and (max-width: 1230px) and (min-width: 768px) {
   /*min greater than or equal to - Max less than or equal to*/
   /*MENU*/
