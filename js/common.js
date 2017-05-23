@@ -146,15 +146,15 @@ function fnSearchEvents(sWord) {
       sAppend +=
         '<div data-id="' +oEvent.sID+ '" class="event-box box">\
           <div class="boxContentWrapper">\
-            <div class="fpBoxTop">\
+            <div class="fpBoxTop hoverPointer">\
               <img class="eventimg" src="img/events/' +oEvent.sImage+ '" alt="' +oEvent.sTitle+ '">\
               <div class="price">' +oEvent.sPrice+ '</div>\
             </div>\
-            <div class="fpBoxContent">\
-              <div class="fpTimeDate">\
+            <div class="fpBoxContent hoverPointer">\
+              <div class="fpTimeDate hoverPointer">\
                 <p>' +formatDate(new Date(oEvent.sDate))+ '</p>\
               </div>\
-              <div class="fpEventTitle">\
+              <div class="fpEventTitle hoverPointer">\
                 <h3>' +oEvent.sTitle+ '</h3>\
               </div>\
               <div class="fpLocation">\

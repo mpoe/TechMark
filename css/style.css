@@ -127,7 +127,8 @@ button:hover, input[type=submit]:hover {
   color: #282C35;
   padding: 0.2em 0.625em;
   position: absolute;
-  right: 0; }
+  right: 0;
+  text-transform: uppercase; }
 
 .fpLocation {
   font-size: small;
@@ -157,6 +158,10 @@ i.fa.fa-map-marker:hover {
   width: 100%;
   display: flex;
   justify-content: center; }
+
+.hoverPointer {
+  /*to add cursor to the event link components.*/
+  cursor: pointer; }
 
 /*------------------------------------- Contact page specific -------------------------------------*/
 #contactHeader {
@@ -581,12 +586,14 @@ time.icon {
   border-radius: 0.6em;
   align-items: center;
   background: #fff;
-  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd; }
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  text-align: center; }
   time.icon strong {
     background: #028910;
     border-radius: .6em .6em 0 0;
     padding: .3em 1em;
-    color: white; }
+    color: white;
+    width: 5.5em; }
   time.icon span {
     font-size: 2em; }
 
