@@ -392,10 +392,18 @@ nav ul {
   }
 
 .navigationSearch {
-  padding:1em;
+  padding: 1em 0;
   width: 0;
   transition: width 600ms;
   }
+
+.navigationSearch::placeholder {
+  padding-left: 1em;
+}
+
+.navigationSearch:-ms-input-placeholder {
+  padding-left: 1em;
+}
 
 .navigationSearch:active, .navigationSearch:hover, .navigationSearch:focus {
   width: 14em;
@@ -522,7 +530,7 @@ footer {
   button {
     padding: .9em;
     width: 5em;
-    margin-left: 2em;
+    margin-left: 1.9em;
     margin-top: -.1em;
   }
 }
