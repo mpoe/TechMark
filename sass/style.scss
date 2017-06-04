@@ -150,8 +150,14 @@ button:hover, input[type=submit]:hover {
   flex: 2;
 }
 
+.fpBoxBottom {
+  display: flex;
+  flex: 1;
+}
+
 .fpBoxContent {
   @include flex-col;
+  width:100%;
 }
 
 .eventimg {
@@ -1022,6 +1028,10 @@ section.admSecHalf {
   /*partners*/
   .partnerBox {
     flex-direction: column;
+  }
+
+  .partnerIcon {
+    justify-content: center;
   }
 
   .leftpanel {

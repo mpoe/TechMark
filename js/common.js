@@ -150,16 +150,18 @@ function fnSearchEvents(sWord) {
               <img class="eventimg" src="img/events/' +oEvent.sImage+ '" alt="' +oEvent.sTitle+ '">\
               <div class="price">' +oEvent.sPrice+ '</div>\
             </div>\
-            <div class="fpBoxContent hoverPointer">\
-              <div class="fpTimeDate hoverPointer">\
-                <p>' +formatDate(new Date(oEvent.sDate))+ '</p>\
-              </div>\
-              <div class="fpEventTitle hoverPointer">\
-                <h3>' +oEvent.sTitle+ '</h3>\
-              </div>\
-              <div class="fpLocation">\
-                <div class="fploc"><p>' +oEvent.sLocation+ '</p></div>\
-                <div class="fpmap"><i class="fa fa-map-marker" title="See location on Google maps" aria-hidden="true"></i></div>\
+            <div class="fpBoxBottom">\
+              <div class="fpBoxContent hoverPointer">\
+                <div class="fpTimeDate hoverPointer">\
+                  <p>' +formatDate(new Date(oEvent.sDate))+ '</p>\
+                </div>\
+                <div class="fpEventTitle hoverPointer">\
+                  <h3>' +oEvent.sTitle+ '</h3>\
+                </div>\
+                <div class="fpLocation">\
+                  <div class="fploc"><p>' +oEvent.sLocation+ '</p></div>\
+                  <div class="fpmap"><i class="fa fa-map-marker" title="See location on Google maps" aria-hidden="true"></i></div>\
+                </div>\
               </div>\
             </div>\
           </div>\
