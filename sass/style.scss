@@ -209,6 +209,18 @@ i.fa.fa-map-marker:hover {
   justify-content: center;
 }
 
+/*no results text*/
+.noResults {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+    h2 {
+      margin-top: 2em;
+      color: $hoverbuttonalert;
+    }
+}
+
+
 .hoverPointer{ /*to add cursor to the event link components.*/
   cursor: pointer;
 }

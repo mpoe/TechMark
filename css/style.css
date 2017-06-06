@@ -165,6 +165,15 @@ i.fa.fa-map-marker:hover {
   display: flex;
   justify-content: center; }
 
+/*no results text*/
+.noResults {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .noResults h2 {
+    margin-top: 2em;
+    color: #CC0000; }
+
 .hoverPointer {
   /*to add cursor to the event link components.*/
   cursor: pointer; }

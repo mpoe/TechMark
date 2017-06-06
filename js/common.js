@@ -127,8 +127,10 @@ function fnSearchEvents(sWord) {
   $('#date').attr('placeholder', year+ '-' +month+ '-' +day);
   $('.searchTerm').val(sWord);
   $('#search-results').html('');
-  $.getJSON('data/events.txt', function(oData) {
+  $('.noResults').html('');
     var sAppend = '';
+  $.getJSON('data/events.txt', function(oData) {
+
 
     $.each(oData, function(index, oEvent) {
       if(typeof sWord !== "undefined" && sWord != "" && !oEvent.sTitle.includes(sWord))
@@ -168,6 +170,15 @@ function fnSearchEvents(sWord) {
         </div>';
     });
     $('#search-results').append(sAppend);
+      if (sAppend == "") {
+          console.log("here");
+          $('.noResults').append('\
+              <div class="noResults">\
+              <h2>Unfortunatly we were unable to find any results...</h2>\
+              <h2>Please try again!</h2>\
+              </div>\
+              ');
+      }
   });
 }
 var globalEvent = "";
